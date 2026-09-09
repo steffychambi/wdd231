@@ -1,0 +1,137 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Course home page for WDD 231 Web Frontend Development student portfolio.">
+
+    <meta name="author" content="Diane Steffy Chambi Gutierrez">
+
+    <title>Diane Steffy Chambi Gutierrez | WDD 231 Course Home Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <div class="profile">
+        <img src="images/logo.svg" alt="Site logo">
+        <span>Diane Steffy Chambi Gutierrez</span>
+    </div>
+
+    <button id="menuButton" aria-label="Open navigation menu">
+        ☰
+    </button>
+
+    <nav id="navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="#">Chamber</a>
+        <a href="#">Final</a>
+    </nav>
+</header>
+
+
+<main>
+
+    <h1>Home</h1>
+
+
+    <section class="card">
+        <h2>About Me</h2>
+
+        <p>
+            Hello! My name is Diane Steffy Chambi Gutierrez.
+            I am an Industrial Engineering student interested in
+            technology, programming, and web development.
+        </p>
+
+        <p>
+            This page demonstrates my learning progress in
+            WDD 231 Web Frontend Development.
+        </p>
+    </section>
+
+    <section class="card certificate">
+
+        <h2>Web and Computer Programming Certificate</h2>
+
+        <div class="buttons">
+            <button id="allCourses">All Courses</button>
+            <button id="wddCourses">WDD Courses</button>
+            <button id="cseCourses">CSE Courses</button>
+        </div>
+
+
+        <p class="credits">
+            Total Credits: <span id="totalCredits">0</span>
+        </p>
+
+
+        <div id="courses" class="course-container">
+
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Place</h2>
+
+        <img 
+        src="images/place.jpg" 
+        alt="Santa Cruz Bolivia">
+
+        <p>
+            Santa Cruz, Bolivia
+        </p>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <div class="social">
+
+        <a href="https://github.com/steffychambi" target="_blank">
+            GitHub
+        </a>
+
+        <a href="https://www.linkedin.com/in/steffy-chambi-b646aa1b9/" target="_blank">
+            LinkedIn
+        </a>
+
+        <a href="https://www.facebook.com/steffy.chambi/">
+            Facebook
+        </a>
+
+    </div>
+
+    <p>
+        © <span id="currentYear"></span>
+        Diane Steffy Chambi Gutierrez
+        | Bolivia
+    </p>
+
+    <p id="lastModified">
+
+    </p>
+
+</footer>
+
+</body>
+</html>

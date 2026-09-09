@@ -1,0 +1,259 @@
+```css
+/* Small screen styles */
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    color: #222;
+    background-color: #f4f7f9;
+}
+
+
+/* HEADER */
+
+header {
+    background-color: #003049;
+    color: white;
+    padding: 1rem;
+}
+
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.profile img {
+    width: 60px;
+}
+
+
+.profile span {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+
+/* Hamburger */
+
+#menuButton {
+    margin-top: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+
+/* NAVIGATION */
+
+nav {
+    display: none;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+
+nav.open {
+    display: flex;
+}
+
+
+nav a {
+    color: white;
+    padding: .8rem;
+    text-align: center;
+}
+
+
+nav a:hover,
+nav .active {
+    background-color: #f77f00;
+    color:white;
+}
+
+
+
+/* MAIN */
+
+main {
+    padding: 1rem;
+}
+
+
+h1 {
+    text-align:center;
+    color:#003049;
+}
+
+
+h2 {
+    background-color:#003049;
+    color:white;
+    padding:.6rem;
+    font-size:1.2rem;
+}
+
+
+
+/* CARDS */
+
+.card {
+
+    background:white;
+
+    margin-bottom:1.5rem;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+
+}
+
+
+.card p {
+
+    padding:0 1rem;
+
+    line-height:1.6;
+
+}
+
+
+
+
+/* COURSE BUTTONS */
+
+.buttons {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:.5rem;
+
+    padding:1rem;
+
+}
+
+
+.buttons button {
+
+    background:#003049;
+
+    color:white;
+
+    border:none;
+
+    padding:.7rem;
+
+    cursor:pointer;
+
+    border-radius:5px;
+
+}
+
+
+.buttons button:hover {
+
+    background:#f77f00;
+
+}
+
+
+
+/* COURSES */
+
+.course-container {
+
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    gap:1rem;
+
+    padding:1rem;
+
+}
+
+
+
+.course-card {
+
+    border:2px solid #003049;
+
+    padding:1rem;
+
+    border-radius:8px;
+
+    background:#ffffff;
+
+}
+
+
+.completed {
+
+    background:#d8f3dc;
+
+    border-color:#2a9d8f;
+
+}
+
+
+
+
+.credits {
+
+    font-weight:bold;
+
+}
+
+
+
+
+/* FOOTER */
+
+footer {
+
+    background:#003049;
+
+    color:white;
+
+    text-align:center;
+
+    padding:1rem;
+
+}
+
+
+
+.social {
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:1rem;
+
+    margin-bottom:1rem;
+
+}
+
+
+.social a {
+
+    color:white;
+
+}
+
+
+.social a:hover {
+
+    color:#f77f00;
+
+}
