@@ -18,6 +18,7 @@ header {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .profile {
@@ -38,10 +39,6 @@ header {
 }
 
 /* mobile navigation */
-
-header {
-    position: relative;
-}
 
 #menuButton {
     margin-top: 1rem;
