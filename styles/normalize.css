@@ -1,11 +1,3 @@
-```css
-/*
-   normalize css
-*/
-
-/*
-   includes padding and borders inside the element's total width
-*/
 * {
     box-sizing: border-box;
 }
@@ -14,26 +6,16 @@ html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
 }
-
-
 body {
     margin: 0;
 }
 
-
-/*
-   makes images responsive
-   keeps the original proportions and prevents distortion
-*/
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-/*
-   makes form elements use the same font as the page
-*/
 button,
 input,
 textarea,
@@ -43,4 +25,15 @@ select {
 
 a {
     text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+button {
+    cursor: pointer;
 }

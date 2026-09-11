@@ -4,16 +4,16 @@
 */
 
 
-let currentYear = document.querySelector("#currentYear");
-
-let lastModified = document.querySelector("#lastModified");
+const currentYear = document.querySelector("#currentYear");
+const lastModified = document.querySelector("#lastModified");
 
 
 
 /*
    gets the current year dynamically
 */
-let today = new Date();
+
+const today = new Date();
 
 currentYear.textContent = today.getFullYear();
 

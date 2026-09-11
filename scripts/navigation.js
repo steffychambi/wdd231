@@ -4,8 +4,8 @@
    controls the mobile menu button*/
 
 
-let menuButton = document.querySelector("#menuButton");
-let navigation = document.querySelector("#navigation");
+const menuButton = document.querySelector("#menuButton");
+const navigation = document.querySelector("#navigation");
 
 
 /*
