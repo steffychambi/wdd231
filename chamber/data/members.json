@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Hotel Camino Real",
+        "tagline": "Hospitality and Business Excellence",
+        "email": "info@caminoreal.com.bo",
+        "phone": "+591 3 342-3535",
+        "website": "www.caminoreal.com.bo",
+        "url": "https://www.caminoreal.com.bo/",
+        "image": "company1.webp",
+        "membership": 3
+    },
+    {
+        "name": "PIL Andina",
+        "tagline": "Nutrition for Every Family",
+        "email": "info@pilandina.com.bo",
+        "phone": "+591 3 336-7000",
+        "website": "www.pilandina.com.bo",
+        "url": "https://www.pilandina.com.bo/",
+        "image": "company2.webp",
+        "membership": 3
+    },
+    {
+        "name": "Farmacorp",
+        "tagline": "Your Health, Our Commitment",
+        "email": "contacto@farmacorp.com",
+        "phone": "+591 3 342-2222",
+        "website": "www.farmacorp.com",
+        "url": "https://www.farmacorp.com/",
+        "image": "company3.webp",
+        "membership": 2
+    },
+    {
+        "name": "Hipermaxi",
+        "tagline": "Everything You Need",
+        "email": "info@hipermaxi.com",
+        "phone": "+591 3 342-0000",
+        "website": "www.hipermaxi.com",
+        "url": "https://www.hipermaxi.com/",
+        "image": "company4.webp",
+        "membership": 2
+    },
+    {
+        "name": "Banco Mercantil Santa Cruz",
+        "tagline": "Growing Together",
+        "email": "info@bmsc.com.bo",
+        "phone": "+591 3 336-6666",
+        "website": "www.bmsc.com.bo",
+        "url": "https://www.bmsc.com.bo/",
+        "image": "company5.webp",
+        "membership": 3
+    },
+    {
+        "name": "UPSA",
+        "tagline": "Education for the Future",
+        "email": "info@upsa.edu.bo",
+        "phone": "+591 3 342-1000",
+        "website": "www.upsa.edu.bo",
+        "url": "https://www.upsa.edu.bo/",
+        "image": "company6.webp",
+        "membership": 2
+    },
+    {
+        "name": "Tahuichi Academy",
+        "tagline": "Developing Young Talent",
+        "email": "info@tahuichi.com",
+        "phone": "+591 3 346-5000",
+        "website": "www.tahuichi.com",
+        "url": "#",
+        "image": "company7.webp",
+        "membership": 1
+    },
+    {
+        "name": "Café 24",
+        "tagline": "Local Flavor, Great Moments",
+        "email": "hello@cafe24.com.bo",
+        "phone": "+591 3 334-2424",
+        "website": "www.cafe24.com.bo",
+        "url": "#",
+        "image": "company8.webp",
+        "membership": 1
+    },
+    {
+        "name": "Santa Cruz Business Center",
+        "tagline": "Connecting Local Businesses",
+        "email": "info@scbusinesscenter.bo",
+        "phone": "+591 3 355-2020",
+        "website": "www.scbusinesscenter.bo",
+        "url": "#",
+        "image": "company9.webp",
+        "membership": 1
+    }
+]
