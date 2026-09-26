@@ -668,12 +668,10 @@ body.dark-mode {
     --footer: #0d1210;
     --dark-green: #8de0b5;
     --blue: #8bc7ff;
-}
-
-body.dark-mode {
     background-color: var(--light-green);
     color: var(--text);
 }
+
 
 body.dark-mode .site-header {
     background-color: #003d24;
