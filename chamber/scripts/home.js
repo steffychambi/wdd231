@@ -131,12 +131,8 @@ function displayForecast(data) {
     const dailyForecasts = [];
     const usedDates = new Set();
 
-    const today = new Date();
-
-    const todayString =
-        today.toLocaleDateString("en-CA", {
-            timeZone: "America/Santa_Cruz"
-        });
+    const today =
+        new Date().toISOString().split("T")[0];
 
 
     for (const item of data.list) {
@@ -145,7 +141,8 @@ function displayForecast(data) {
             item.dt_txt.split(" ")[0];
 
 
-        if (date === todayString) {
+        // Skip today's forecast
+        if (date === today) {
             continue;
         }
 
@@ -165,6 +162,42 @@ function displayForecast(data) {
 
     }
 
+
+    dailyForecasts.forEach((day) => {
+
+        const date =
+            new Date(day.dt * 1000);
+
+
+        const dayName =
+            date.toLocaleDateString("en-US", {
+                weekday: "short"
+            });
+
+
+        const temperature =
+            Math.round(day.main.temp);
+
+
+        const card =
+            document.createElement("article");
+
+
+        card.classList.add("forecast-card");
+
+
+        card.innerHTML = `
+            <h4>${dayName}</h4>
+            <p>${temperature}&deg;C</p>
+            <p>${day.weather[0].description}</p>
+        `;
+
+
+        forecastContainer.appendChild(card);
+
+    });
+
+}
 
     dailyForecasts.forEach((day) => {
 
