@@ -141,7 +141,6 @@ function displayForecast(data) {
             item.dt_txt.split(" ")[0];
 
 
-        // Skip today's forecast
         if (date === today) {
             continue;
         }
@@ -182,42 +181,6 @@ function displayForecast(data) {
         const card =
             document.createElement("article");
 
-
-        card.classList.add("forecast-card");
-
-
-        card.innerHTML = `
-            <h4>${dayName}</h4>
-            <p>${temperature}&deg;C</p>
-            <p>${day.weather[0].description}</p>
-        `;
-
-
-        forecastContainer.appendChild(card);
-
-    });
-
-}
-
-    dailyForecasts.forEach((day) => {
-
-        const date =
-            new Date(day.dt * 1000);
-
-
-        const dayName =
-            date.toLocaleDateString("en-US", {
-                weekday: "short",
-                timeZone: "America/Santa_Cruz"
-            });
-
-
-        const temperature =
-            Math.round(day.main.temp);
-
-
-        const card =
-            document.createElement("article");
 
         card.classList.add("forecast-card");
 
