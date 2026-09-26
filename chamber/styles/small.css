@@ -438,17 +438,13 @@ main {
 
 .hero-content {
     position: absolute;
-    z-index: 1;
-
-    top: 50%;
-    left: 50%;
-
-    width: 90%;
-
-    transform: translate(-50%, -50%);
-
-    text-align: center;
-    color: #ffffff;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    background-color: rgba(0, 77, 43, 0.85);
+    color: var(--white);
+    z-index: 2;
 }
 
 .hero-content h2 {
