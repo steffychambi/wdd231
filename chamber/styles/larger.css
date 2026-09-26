@@ -166,3 +166,63 @@
         height: 100px;
     }
 }
+/*HOME PAGE*/
+
+@media screen and (min-width: 700px) {
+
+    .hero {
+        margin: 0 -2rem 2.5rem;
+    }
+
+    .hero img {
+        min-height: 400px;
+        max-height: 500px;
+    }
+
+    .hero-content h2 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.15rem;
+    }
+
+
+    /* Events */
+
+    .events-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* Weather */
+
+    .current-weather {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .forecast {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    /* Spotlights */
+
+    .spotlights {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+@media screen and (min-width: 1000px) {
+
+    .hero {
+        margin-bottom: 3rem;
+    }
+
+    .hero img {
+        max-height: 520px;
+    }
+
+}

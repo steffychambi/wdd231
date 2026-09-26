@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Santa Cruz Chamber of Commerce | Home</title>
+
+    <meta
+        name="description"
+        content="Discover business opportunities, local events, weather, and chamber members in Santa Cruz de la Sierra, Bolivia."
+    >
+
+    <meta
+        name="author"
+        content="Diane Steffy Chambi Gutierrez"
+    >
+
+    <link rel="icon" href="images/chamber-logo.svg">
+
+    <!-- Open Graph -->
+    <meta
+        property="og:title"
+        content="Santa Cruz Chamber of Commerce"
+    >
+
+    <meta
+        property="og:description"
+        content="Connect with businesses, events, and opportunities through the Santa Cruz Chamber of Commerce."
+    >
+
+    <meta
+        property="og:image"
+        content="https://steffychambi.github.io/wdd231/chamber/images/chamber-logo.svg"
+    >
+
+    <meta
+        property="og:url"
+        content="https://steffychambi.github.io/wdd231/chamber/index.html"
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/home.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <div class="header-inner">
+
+            <!-- Logo / Brand -->
+            <a class="brand" href="index.html">
+
+                <img
+                    src="images/chamber-logo.svg"
+                    alt="Santa Cruz Chamber of Commerce logo"
+                >
+
+                <div class="brand-text">
+                    <span>Santa Cruz</span>
+                    <span>Chamber of Commerce</span>
+                </div>
+
+            </a>
+
+
+            <!-- Header controls -->
+            <div class="header-controls">
+
+                <button
+                    id="dark-mode"
+                    class="dark-mode-button"
+                    type="button"
+                    aria-label="Toggle dark mode"
+                    title="Toggle dark mode"
+                >
+                    ☾
+                </button>
+
+                <button
+                    id="menu-button"
+                    class="menu-button"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+
+            <!-- Navigation -->
+            <nav
+                id="navigation"
+                class="navigation"
+                aria-label="Main navigation"
+            >
+
+                <a
+                    href="index.html"
+                    class="active"
+                    aria-current="page"
+                >
+                    Home
+                </a>
+
+                <a href="directory.html">Directory</a>
+
+                <a href="join.html">Join</a>
+
+                <a href="discover.html">Discover</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <h1 class="sr-only">Santa Cruz Chamber of Commerce</h1>
+
+
+        <!-- Hero -->
+        <section class="hero" aria-labelledby="hero-heading">
+
+            <img
+                src="images/hero.webp"
+                alt="Santa Cruz de la Sierra cityscape"
+                width="1200"
+                height="600"
+            >
+
+            <div class="hero-content">
+
+                <h2 id="hero-heading">
+                    Connect. Grow. Thrive.
+                </h2>
+
+                <p>
+                    Discover opportunities and connect with businesses
+                    in Santa Cruz de la Sierra.
+                </p>
+
+                <a
+                    href="join.html"
+                    class="cta-button"
+                >
+                    Join the Chamber
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Current Events -->
+        <section class="home-section events-section">
+
+            <h2>Current Events</h2>
+
+            <div class="events-content">
+
+                <article class="event-card">
+
+                    <p class="event-date">
+                        September 30
+                    </p>
+
+                    <h3>Business Networking Breakfast</h3>
+
+                    <p>
+                        Meet local business owners and discover
+                        new opportunities for collaboration.
+                    </p>
+
+                    <a href="discover.html">
+                        Explore Chamber Events
+                    </a>
+
+                </article>
+
+
+                <article class="event-card">
+
+                    <p class="event-date">
+                        October 5
+                    </p>
+
+                    <h3>Santa Cruz Business Workshop</h3>
+
+                    <p>
+                        Join local entrepreneurs for a workshop
+                        focused on business growth and development.
+                    </p>
+
+                    <a href="discover.html">
+                        Explore Chamber Events
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Weather -->
+        <section class="home-section weather-section">
+
+            <h2>Santa Cruz Weather</h2>
+
+            <div class="current-weather">
+
+                <div>
+                    <p class="weather-label">Current Temperature</p>
+
+                    <p
+                        id="current-temp"
+                        class="current-temp"
+                    >
+                        Loading...
+                    </p>
+                </div>
+
+                <div>
+                    <p class="weather-label">Current Conditions</p>
+
+                    <p id="weather-description">
+                        Loading...
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="forecast-container">
+
+                <h3>3-Day Forecast</h3>
+
+                <div
+                    id="forecast"
+                    class="forecast"
+                >
+                    <p>Loading forecast...</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Company Spotlights -->
+        <section class="home-section spotlight-section">
+
+            <h2>Business Spotlights</h2>
+
+            <div
+                id="spotlights"
+                class="spotlights"
+            >
+                <p>Loading member spotlights...</p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <div class="footer-inner">
+
+            <!-- Contact -->
+            <section class="footer-contact">
+
+                <h2>Santa Cruz Chamber of Commerce</h2>
+
+                <p>10 Calle Independencia</p>
+                <p>Santa Cruz de la Sierra, Bolivia</p>
+                <p>info@santacruzchamber.org</p>
+                <p>+591 3 333-4567</p>
+
+            </section>
+
+
+            <!-- Social -->
+            <section class="footer-social">
+
+                <h2 class="sr-only">Social Media</h2>
+
+                <div class="social-links">
+
+                    <a
+                        href="#"
+                        aria-label="YouTube"
+                        title="YouTube"
+                    >
+                        ▶
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="X"
+                        title="X"
+                    >
+                        X
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="LinkedIn"
+                        title="LinkedIn"
+                    >
+                        in
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- Project information -->
+            <section class="footer-project">
+
+                <p>WDD231 Class Project</p>
+
+                <p>Diane Steffy Chambi Gutierrez</p>
+
+                <p>
+                    &copy;
+                    <span id="current-year"></span>
+                    Santa Cruz Chamber of Commerce
+                </p>
+
+                <p>
+                    Last Modification:
+                    <span id="last-modified"></span>
+                </p>
+
+            </section>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
