@@ -54,9 +54,6 @@ document.querySelector("#last-modified").textContent =
 const latitude = -17.7833;
 const longitude = -63.1821;
 
-
-
-
 const currentWeatherUrl =
     `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=50074e5b202d79c3163b00d41de50323`;
 
@@ -131,16 +128,26 @@ function displayForecast(data) {
 
     forecastContainer.innerHTML = "";
 
-
     const dailyForecasts = [];
-
     const usedDates = new Set();
+
+    const today = new Date();
+
+    const todayString =
+        today.toLocaleDateString("en-CA", {
+            timeZone: "America/Santa_Cruz"
+        });
 
 
     for (const item of data.list) {
 
         const date =
             item.dt_txt.split(" ")[0];
+
+
+        if (date === todayString) {
+            continue;
+        }
 
 
         if (!usedDates.has(date)) {
@@ -153,9 +160,7 @@ function displayForecast(data) {
 
 
         if (dailyForecasts.length === 3) {
-
             break;
-
         }
 
     }
@@ -169,7 +174,8 @@ function displayForecast(data) {
 
         const dayName =
             date.toLocaleDateString("en-US", {
-                weekday: "short"
+                weekday: "short",
+                timeZone: "America/Santa_Cruz"
             });
 
 
@@ -332,7 +338,6 @@ function displaySpotlights(members) {
                 </p>
 
             </div>
-
         `;
 
 
