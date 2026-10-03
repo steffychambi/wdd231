@@ -1,6 +1,6 @@
 :root {
     --green: #006b3f;
-    --dark-green: hsl(154, 100%, 15%);
+    --dark-green: #004d2b;
     --blue: #0057b8;
     --light-green: #eef7f2;
     --white: #ffffff;
@@ -9,6 +9,96 @@
     --border: #cccccc;
     --placeholder: #dddddd;
     --footer: #f0f0f0;
+    --card-alt: #e5eee9;
+    --error: #a00000;
+
+    --header-bg: var(--green);
+    --nav-bg: var(--dark-green);
+    --nav-active: var(--blue);
+
+    --control-bg: var(--white);
+    --control-border: var(--green);
+    --control-active: var(--green);
+
+    --input-bg: var(--white);
+    --input-border: var(--border);
+
+    --card-bg: var(--white);
+    --membership-bg: var(--light-green);
+    --summary-bg: var(--light-green);
+
+    --social-bg: var(--dark-green);
+    --social-hover: var(--blue);
+
+    --cta-bg: var(--blue);
+    --cta-hover: var(--dark-green);
+
+    --submit-bg: var(--green);
+    --submit-hover: var(--blue);
+
+    --link-hover: var(--dark-green);
+
+    --event-link: var(--dark-green);
+    --member-link: var(--text);
+    --spotlight-link: var(--dark-green);
+
+    --main-heading: var(--dark-green);
+
+    --shadow: #00000014;
+    --hero-overlay: #00000059;
+    --hero-content-bg: #004d2bd9;
+    --dialog-overlay: #0000008c;
+    --dialog-shadow: #0000004d;
+
+    --on-dark: #ffffff;
+    --image-bg: #ffffff;
+}
+
+body.dark-mode {
+    --light-green: #07110d;
+    --white: #0d1b15;
+    --text: #f4fff9;
+    --gray: #c8ddd3;
+    --border: #315347;
+    --placeholder: #1b3028;
+    --footer: #050b08;
+
+    --dark-green: #72e0aa;
+    --blue: #80c8ff;
+
+    --header-bg: #003820;
+    --nav-bg: #002719;
+    --nav-active: #006b3f;
+
+    --control-bg: #10251c;
+    --control-border: #477463;
+    --control-active: #1769aa;
+
+    --input-bg: #10251c;
+    --input-border: #477463;
+
+    --card-bg: #0d1b15;
+    --membership-bg: #10251c;
+    --summary-bg: #10251c;
+
+    --social-bg: #0d5c3a;
+    --social-hover: #1769aa;
+
+    --cta-bg: #1769aa;
+    --cta-hover: #0d6b45;
+
+    --submit-bg: #006b3f;
+    --submit-hover: #1769aa;
+
+    --link-hover: #b9ddff;
+
+    --event-link: var(--blue);
+    --member-link: var(--blue);
+    --spotlight-link: var(--blue);
+
+    --main-heading: #f4fff9;
+
+    --image-bg: #ffffff;
 }
 
 body {
@@ -38,11 +128,11 @@ a:hover {
     border: 0;
 }
 
-/* Header */
+/* header */
 
 .site-header {
-    background-color: var(--green);
-    color: var(--white);
+    background-color: var(--header-bg);
+    color: var(--on-dark);
 }
 
 .header-inner {
@@ -50,24 +140,23 @@ a:hover {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0.8rem 1rem;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-/* Brand */
+/* brand */
 
 .brand {
     display: flex;
     align-items: center;
     gap: 0.65rem;
-    color: #ffffff;
+    color: var(--on-dark);
 }
 
 .brand:hover {
     text-decoration: none;
-    color: #ffffff;
+    color: var(--on-dark);
 }
 
 .brand img {
@@ -91,7 +180,7 @@ a:hover {
     font-weight: 600;
 }
 
-/* Header buttons */
+/* header buttons */
 
 .header-controls {
     display: flex;
@@ -103,44 +192,36 @@ a:hover {
 .menu-button {
     width: 40px;
     height: 40px;
-
     border-radius: 50%;
-    border: 2px solid var(--white);
-
+    border: 2px solid var(--on-dark);
     background-color: transparent;
-    color: var(--white);
-
+    color: var(--on-dark);
     display: flex;
     align-items: center;
     justify-content: center;
-
     font-size: 1.2rem;
 }
 
 .dark-mode-button:hover,
 .menu-button:hover {
-    background-color: var(--white);
-    color: var(--green);
+    background-color: var(--on-dark);
+    color: var(--header-bg);
 }
 
 .menu-button {
     border-radius: 5px;
 }
 
-/* Navigation */
+/* navigation */
 
 .navigation {
     display: none;
-
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-
     z-index: 100;
-
-    background-color: var(--dark-green);
-
+    background-color: var(--nav-bg);
     flex-direction: column;
 }
 
@@ -149,7 +230,7 @@ a:hover {
 }
 
 .navigation a {
-    color: var(--white);
+    color: var(--on-dark);
     padding: 1rem;
     text-align: center;
     font-weight: 700;
@@ -157,12 +238,12 @@ a:hover {
 
 .navigation a:hover,
 .navigation a.active {
-    background-color: var(--blue);
-    color: var(--white);
+    background-color: var(--nav-active);
+    color: var(--on-dark);
     text-decoration: none;
 }
 
-/* Main */
+/* main */
 
 main {
     max-width: 1200px;
@@ -175,12 +256,12 @@ main {
 }
 
 .main-heading h1 {
-    color: var(--dark-green);
+    color: var(--main-heading);
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-/* View buttons */
+/* view buttons */
 
 .view-controls {
     display: flex;
@@ -190,14 +271,10 @@ main {
 
 .view-button {
     min-width: 100px;
-
     padding: 0.65rem 1.5rem;
-
-    border: 1px solid var(--green);
-
-    background-color: var(--white);
+    border: 1px solid var(--control-border);
+    background-color: var(--control-bg);
     color: var(--dark-green);
-
     font-weight: 700;
 }
 
@@ -211,11 +288,11 @@ main {
 
 .view-button:hover,
 .view-button.active {
-    background-color: var(--green);
-    color: var(--white);
+    background-color: var(--control-active);
+    color: var(--on-dark);
 }
 
-/* Members */
+/* members */
 
 .members.grid-view {
     display: grid;
@@ -223,17 +300,14 @@ main {
     gap: 1rem;
 }
 
-/* Cards */
+/* cards */
 
 .member-card {
-    background-color: var(--white);
-
+    background-color: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: 4px;
-
     padding: 1rem;
-
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px 3px var(--shadow);
 }
 
 .card-header {
@@ -258,7 +332,7 @@ main {
     margin: 1rem 0;
 }
 
-/* Card information */
+/* card information */
 
 .card-content {
     display: grid;
@@ -270,13 +344,10 @@ main {
 .member-image {
     width: 110px;
     height: 100px;
-
     background-color: var(--placeholder);
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     overflow: hidden;
 }
 
@@ -284,7 +355,7 @@ main {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    background-color: var(--white);
+    background-color: var(--image-bg);
 }
 
 .member-info {
@@ -307,10 +378,14 @@ main {
 
 .member-info a {
     display: block;
-    color: var(--text);
+    color: var(--member-link);
 }
 
-/* List */
+.member-info a:hover {
+    color: var(--link-hover);
+}
+
+/* list */
 
 .members.list-view {
     display: flex;
@@ -327,14 +402,14 @@ main {
 }
 
 .members.list-view .member-card:nth-child(even) {
-    background-color: #e5eee9;
+    background-color: var(--card-alt);
 }
 
 .members.list-view .member-image {
     display: none;
 }
 
-/* Footer */
+/* footer */
 
 .site-footer {
     background-color: var(--footer);
@@ -345,10 +420,8 @@ main {
 .footer-inner {
     max-width: 1200px;
     margin: 0 auto;
-
     display: flex;
     flex-direction: column;
-
     text-align: center;
     gap: 2rem;
 }
@@ -364,7 +437,7 @@ main {
     font-size: 0.85rem;
 }
 
-/* Social media */
+/* social media */
 
 .social-links {
     display: flex;
@@ -375,27 +448,23 @@ main {
 .social-links a {
     width: 42px;
     height: 42px;
-
     border-radius: 50%;
-
-    background-color: var(--dark-green);
-    color: var(--white);
-
+    background-color: var(--social-bg);
+    color: var(--on-dark);
     display: flex;
     align-items: center;
     justify-content: center;
-
     font-weight: 800;
     font-size: 0.9rem;
 }
 
 .social-links a:hover {
-    background-color: var(--blue);
-    color: var(--white);
+    background-color: var(--social-hover);
+    color: var(--on-dark);
     text-decoration: none;
 }
 
-/* Footer project */
+/* footer project */
 
 .footer-project {
     font-size: 0.8rem;
@@ -406,15 +475,15 @@ main {
     margin-bottom: 0.2rem;
 }
 
-/* Error */
+/* error */
 
 .error-message {
     text-align: center;
     padding: 2rem;
-    color: #a00000;
+    color: var(--error);
 }
 
-/* Home */
+/* home */
 
 .hero {
     position: relative;
@@ -433,7 +502,7 @@ main {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.35);
+    background: var(--hero-overlay);
 }
 
 .hero-content {
@@ -442,8 +511,8 @@ main {
     left: 0;
     width: 100%;
     padding: 1.5rem;
-    background-color: rgba(0, 77, 43, 0.85);
-    color: var(--white);
+    background-color: var(--hero-content-bg);
+    color: var(--on-dark);
     z-index: 2;
 }
 
@@ -459,24 +528,20 @@ main {
 
 .cta-button {
     display: inline-block;
-
     padding: 0.8rem 1.3rem;
-
-    background-color: var(--blue);
-    color: #ffffff;
-
+    background-color: var(--cta-bg);
+    color: var(--on-dark);
     border-radius: 5px;
-
     font-weight: 800;
 }
 
 .cta-button:hover {
-    background-color: var(--dark-green);
-    color: #ffffff;
+    background-color: var(--cta-hover);
+    color: var(--on-dark);
     text-decoration: none;
 }
 
-/* Home sections */
+/* home sections */
 
 .home-section {
     margin-bottom: 2rem;
@@ -487,7 +552,7 @@ main {
     margin-bottom: 1rem;
 }
 
-/* Events */
+/* events */
 
 .events-content {
     display: grid;
@@ -495,11 +560,9 @@ main {
 }
 
 .event-card {
-    background-color: var(--white);
-
+    background-color: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: 5px;
-
     padding: 1.25rem;
 }
 
@@ -513,6 +576,7 @@ main {
 }
 
 .event-card a {
+    color: var(--event-link);
     font-weight: 700;
 }
 
@@ -521,14 +585,12 @@ main {
     font-weight: 800;
 }
 
-/* Weather */
+/* weather */
 
 .weather-section {
-    background-color: var(--white);
-
+    background-color: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: 5px;
-
     padding: 1.25rem;
 }
 
@@ -542,16 +604,13 @@ main {
     font-weight: 800;
     text-transform: uppercase;
     color: var(--gray);
-
     margin-bottom: 0.25rem;
 }
 
 .current-temp {
     color: var(--dark-green);
-
     font-size: 2rem;
     font-weight: 800;
-
     margin-bottom: 0;
 }
 
@@ -576,10 +635,9 @@ main {
 
 .forecast-card {
     padding: 1rem;
-
     border: 1px solid var(--border);
     border-radius: 5px;
-
+    background-color: var(--card-bg);
     text-align: center;
 }
 
@@ -592,7 +650,7 @@ main {
     margin-bottom: 0.35rem;
 }
 
-/* Spotlights */
+/* spotlights */
 
 .spotlights {
     display: grid;
@@ -600,11 +658,9 @@ main {
 }
 
 .spotlight-card {
-    background-color: var(--white);
-
+    background-color: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: 5px;
-
     padding: 1.25rem;
 }
 
@@ -625,18 +681,15 @@ main {
 .spotlight-image {
     width: 100%;
     height: 120px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     margin-bottom: 1rem;
 }
 
 .spotlight-image img {
     width: 100%;
     height: 100%;
-
     object-fit: contain;
 }
 
@@ -652,258 +705,15 @@ main {
     color: var(--dark-green);
 }
 
-/* Dark mode */
-
-body.dark-mode {
-    --light-green: #121816;
-    --white: #1f2724;
-    --text: #f5f5f5;
-    --gray: #d6d6d6;
-    --border: #59635f;
-    --placeholder: #3a4440;
-    --footer: #0d1210;
-    --dark-green: #8de0b5;
-    --blue: #8bc7ff;
-    background-color: var(--light-green);
-    color: var(--text);
+.spotlight-info a {
+    color: var(--spotlight-link);
 }
 
-
-body.dark-mode .site-header {
-    background-color: #003d24;
+.spotlight-info a:hover {
+    color: var(--link-hover);
 }
 
-body.dark-mode .brand {
-    color: #ffffff;
-}
-
-body.dark-mode .brand:hover {
-    color: #ffffff;
-}
-
-body.dark-mode .navigation {
-    background-color: #002b1a;
-}
-
-body.dark-mode .navigation a {
-    color: #ffffff;
-}
-
-body.dark-mode .navigation a:hover,
-body.dark-mode .navigation a.active {
-    background-color: #005c36;
-    color: #ffffff;
-}
-
-body.dark-mode main {
-    background-color: #121816;
-}
-
-body.dark-mode .main-heading h1 {
-    color: #ffffff;
-}
-
-body.dark-mode .view-button {
-    background-color: #27312d;
-    color: #ffffff;
-    border-color: #69746f;
-}
-
-body.dark-mode .view-button:hover {
-    background-color: #35413c;
-    color: #ffffff;
-}
-
-body.dark-mode .view-button.active {
-    background-color: #1769aa;
-    color: #ffffff;
-    border-color: #1769aa;
-}
-
-body.dark-mode .member-card {
-    background-color: #1f2724;
-    border-color: #59635f;
-}
-
-body.dark-mode .card-header h2 {
-    color: #8de0b5;
-}
-
-body.dark-mode .card-header p {
-    color: #e5e5e5;
-}
-
-body.dark-mode .card-divider {
-    background-color: #59635f;
-}
-
-body.dark-mode .member-info {
-    color: #f5f5f5;
-}
-
-body.dark-mode .member-info span {
-    color: #8de0b5;
-}
-
-body.dark-mode .member-info a {
-    color: #8bc7ff;
-}
-
-body.dark-mode .member-info a:hover {
-    color: #b8dcff;
-}
-
-body.dark-mode .member-image {
-    background-color: #303a35;
-}
-
-body.dark-mode .member-image img {
-    background-color: #ffffff;
-}
-
-body.dark-mode .members.list-view .member-card:nth-child(even) {
-    background-color: #29332f;
-}
-
-body.dark-mode .site-footer {
-    background-color: #0d1210;
-    color: #f5f5f5;
-}
-
-body.dark-mode .footer-contact h2 {
-    color: #8de0b5;
-}
-
-body.dark-mode .footer-contact p,
-body.dark-mode .footer-project p {
-    color: #e0e0e0;
-}
-
-body.dark-mode .social-links a {
-    background-color: #1f6f4b;
-    color: #ffffff;
-}
-
-body.dark-mode .social-links a:hover {
-    background-color: #1769aa;
-    color: #ffffff;
-}
-
-body.dark-mode .dark-mode-button,
-body.dark-mode .menu-button {
-    color: #ffffff;
-    border-color: #ffffff;
-}
-
-body.dark-mode .dark-mode-button:hover,
-body.dark-mode .menu-button:hover {
-    background-color: #ffffff;
-    color: #003d24;
-}
-
-body.dark-mode .hero-content {
-    color: #ffffff;
-}
-
-body.dark-mode .cta-button {
-    background-color: #1769aa;
-    color: #ffffff;
-}
-
-body.dark-mode .cta-button:hover {
-    background-color: #1f6f4b;
-    color: #ffffff;
-}
-
-body.dark-mode .home-section > h2 {
-    color: #8de0b5;
-}
-
-body.dark-mode .event-card {
-    background-color: #1f2724;
-    border-color: #59635f;
-}
-
-body.dark-mode .event-card h3 {
-    color: #8de0b5;
-}
-
-body.dark-mode .event-card p {
-    color: #f5f5f5;
-}
-
-body.dark-mode .event-card a {
-    color: #8bc7ff;
-}
-
-body.dark-mode .event-date {
-    color: #8bc7ff;
-}
-
-body.dark-mode .weather-section {
-    background-color: #1f2724;
-    border-color: #59635f;
-}
-
-body.dark-mode .weather-label {
-    color: #d6d6d6;
-}
-
-body.dark-mode .current-temp {
-    color: #8de0b5;
-}
-
-body.dark-mode #weather-description {
-    color: #f5f5f5;
-}
-
-body.dark-mode .forecast-container h3 {
-    color: #8de0b5;
-}
-
-body.dark-mode .forecast-card {
-    border-color: #59635f;
-    background-color: #27312d;
-}
-
-body.dark-mode .forecast-card h4 {
-    color: #8de0b5;
-}
-
-body.dark-mode .forecast-card p {
-    color: #f5f5f5;
-}
-
-body.dark-mode .spotlight-card {
-    background-color: #1f2724;
-    border-color: #59635f;
-}
-
-body.dark-mode .spotlight-header h3 {
-    color: #8de0b5;
-}
-
-body.dark-mode .spotlight-header p {
-    color: #e5e5e5;
-}
-
-body.dark-mode .spotlight-info {
-    color: #f5f5f5;
-}
-
-body.dark-mode .spotlight-info strong {
-    color: #8de0b5;
-}
-
-body.dark-mode .spotlight-info a {
-    color: #8bc7ff;
-}
-
-body.dark-mode .error-message {
-    color: #ff9b9b;
-}
-
-/* Join Page */
+/* join */
 
 .join-layout {
     display: grid;
@@ -912,7 +722,7 @@ body.dark-mode .error-message {
 
 .join-form-section,
 .membership-section {
-    background-color: var(--white);
+    background-color: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: 5px;
     padding: 1.25rem;
@@ -928,7 +738,7 @@ body.dark-mode .error-message {
     margin-bottom: 1.5rem;
 }
 
-/* Form */
+/* form */
 
 .join-form-section form {
     display: grid;
@@ -947,9 +757,9 @@ body.dark-mode .error-message {
 .join-form-section textarea {
     width: 100%;
     padding: 0.7rem;
-    border: 1px solid var(--border);
+    border: 1px solid var(--input-border);
     border-radius: 4px;
-    background-color: var(--white);
+    background-color: var(--input-bg);
     color: var(--text);
 }
 
@@ -967,23 +777,19 @@ body.dark-mode .error-message {
 .submit-button {
     margin-top: 0.5rem;
     padding: 0.8rem 1.2rem;
-
     border: none;
     border-radius: 5px;
-
-    background-color: var(--green);
-    color: var(--white);
-
+    background-color: var(--submit-bg);
+    color: var(--on-dark);
     font-weight: 800;
     cursor: pointer;
 }
 
 .submit-button:hover {
-    background-color: var(--blue);
+    background-color: var(--submit-hover);
 }
 
-
-/* Membership cards */
+/* membership cards */
 
 .membership-cards {
     display: grid;
@@ -992,13 +798,10 @@ body.dark-mode .error-message {
 
 .membership-card {
     padding: 1.2rem;
-
-    background-color: var(--light-green);
-
+    background-color: var(--membership-bg);
     border: 1px solid var(--border);
     border-left: 5px solid var(--green);
     border-radius: 5px;
-
     animation: membershipCardEntry 0.7s ease-out both;
 }
 
@@ -1025,17 +828,15 @@ body.dark-mode .error-message {
 
 .membership-link {
     display: inline-block;
-
     color: var(--blue);
     font-weight: 800;
 }
 
 .membership-link:hover {
-    color: var(--dark-green);
+    color: var(--link-hover);
 }
 
-
-/* Initial card animation */
+/* initial card animation */
 
 @keyframes membershipCardEntry {
     from {
@@ -1049,26 +850,22 @@ body.dark-mode .error-message {
     }
 }
 
-
-/* Dialog */
+/* dialog */
 
 dialog {
+    position: relative;
     width: 90%;
     max-width: 550px;
-
     padding: 1.5rem;
-
     border: 1px solid var(--border);
     border-radius: 6px;
-
-    background-color: var(--white);
+    background-color: var(--card-bg);
     color: var(--text);
-
-    box-shadow: 0 0 3rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 3rem var(--dialog-shadow);
 }
 
 dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: var(--dialog-overlay);
 }
 
 dialog h2 {
@@ -1089,107 +886,31 @@ dialog li {
 
 .modal-close {
     position: absolute;
-
     top: 1rem;
     right: 1rem;
-
     width: 38px;
     height: 38px;
-
     border: 1px solid var(--border);
     border-radius: 50%;
-
-    background-color: var(--white);
+    background-color: var(--input-bg);
     color: var(--text);
-
     font-size: 1.4rem;
     line-height: 1;
 }
 
 .modal-close:hover {
     background-color: var(--green);
-    color: var(--white);
+    color: var(--on-dark);
 }
 
-/* Dark mode - Join */
-
-body.dark-mode .join-form-section,
-body.dark-mode .membership-section {
-    background-color: #1f2724;
-    border-color: #59635f;
-}
-
-body.dark-mode .join-form-section h2,
-body.dark-mode .membership-section h2 {
-    color: #8de0b5;
-}
-
-body.dark-mode .join-form-section label {
-    color: #f5f5f5;
-}
-
-body.dark-mode .join-form-section input,
-body.dark-mode .join-form-section select,
-body.dark-mode .join-form-section textarea {
-    background-color: #27312d;
-    color: #f5f5f5;
-    border-color: #69746f;
-}
-
-body.dark-mode .membership-card {
-    background-color: #27312d;
-    border-color: #59635f;
-    border-left-color: #8de0b5;
-}
-
-body.dark-mode .membership-card h3 {
-    color: #8de0b5;
-}
-
-body.dark-mode .membership-link {
-    color: #8bc7ff;
-}
-
-body.dark-mode .membership-link:hover {
-    color: #b8dcff;
-}
-
-body.dark-mode dialog {
-    background-color: #1f2724;
-    color: #f5f5f5;
-    border-color: #59635f;
-}
-
-body.dark-mode dialog h2 {
-    color: #8de0b5;
-}
-
-body.dark-mode .modal-close {
-    background-color: #27312d;
-    color: #ffffff;
-    border-color: #69746f;
-}
-
-
-/* Reduced motion */
-
-@media (prefers-reduced-motion: reduce) {
-
-    .membership-card {
-        animation: none;
-    }
-
-}
-/* Thank You Page */
+/* thank you page */
 
 .application-summary {
     margin-top: 1.5rem;
     padding: 1rem;
-
     border: 1px solid var(--border);
     border-radius: 5px;
-
-    background-color: var(--light-green);
+    background-color: var(--summary-bg);
 }
 
 .application-summary p {
@@ -1204,11 +925,10 @@ body.dark-mode .modal-close {
     color: var(--dark-green);
 }
 
-body.dark-mode .application-summary {
-    background-color: #27312d;
-    border-color: #59635f;
-}
+/* reduced motion */
 
-body.dark-mode .application-summary strong {
-    color: #8de0b5;
+@media (prefers-reduced-motion: reduce) {
+    .membership-card {
+        animation: none;
+    }
 }
