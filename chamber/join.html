@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Join | Santa Cruz Chamber of Commerce</title>
+
+    <meta name="description" content="Apply for membership in the Santa Cruz Chamber of Commerce and connect with businesses and opportunities in Santa Cruz de la Sierra, Bolivia.">
+
+    <meta name="author" content="Diane Steffy Chambi Gutierrez">
+
+    <link rel="icon" href="images/chamber-logo.svg">
+
+    <meta property="og:title" content="Join the Santa Cruz Chamber of Commerce">
+    <meta property="og:description" content="Apply for membership in the Santa Cruz Chamber of Commerce in Santa Cruz de la Sierra, Bolivia.">
+    <meta property="og:image" content="https://steffychambi.github.io/wdd231/chamber/images/chamber-logo.svg">
+    <meta property="og:url" content="https://steffychambi.github.io/wdd231/chamber/join.html">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="header-inner">
+
+            <a class="brand" href="index.html">
+                <img src="images/chamber-logo.svg"
+                    alt="Santa Cruz Chamber of Commerce logo">
+
+                <div class="brand-text">
+                    <span>Santa Cruz</span>
+                    <span>Chamber of Commerce</span>
+                </div>
+            </a>
+
+            <div class="header-controls">
+
+                <button id="dark-mode"
+                    class="dark-mode-button"
+                    type="button"
+                    aria-label="Toggle dark mode"
+                    title="Toggle dark mode">
+                    ☾
+                </button>
+
+                <button id="menu-button"
+                    class="menu-button"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false">
+                    ☰
+                </button>
+
+            </div>
+
+            <nav id="navigation"
+                class="navigation"
+                aria-label="Main navigation">
+
+                <a href="index.html">Home</a>
+
+                <a href="directory.html">Directory</a>
+
+                <a href="join.html"
+                    class="active"
+                    aria-current="page">
+                    Join
+                </a>
+
+                <a href="discover.html">Discover</a>
+
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <div class="main-heading">
+            <h1>Join the Chamber</h1>
+        </div>
+
+
+        <div class="join-layout">
+
+            <!-- Membership Form -->
+
+            <section class="join-form-section"
+                aria-labelledby="join-form-heading">
+
+                <h2 id="join-form-heading">
+                    Membership Application
+                </h2>
+
+                <p>
+                    Complete the form below to apply for membership
+                    in the Santa Cruz Chamber of Commerce.
+                </p>
+                <p class="form-note">
+                    <span aria-hidden="true">*</span> Required fields
+                </p>
+
+                <form method="get" action="thankyou.html">
+
+                    <label for="first-name">
+                        First Name *
+                        <input
+                            id="first-name"
+                            name="firstName"
+                            type="text"
+                            title="Enter your first name"
+                            autocomplete="given-name"
+                            required>
+                    </label>
+
+
+                    <label for="last-name">
+                        Last Name *
+                        <input
+                            id="last-name"
+                            name="lastName"
+                            type="text"
+                            title="Enter your last name"
+                            autocomplete="family-name"
+                            required>
+                    </label>
+
+
+                    <label for="organization-title">
+                        Organizational Title
+                        <input
+                            id="organization-title"
+                            name="organizationTitle"
+                            type="text"
+                            title="Enter your organizational title"
+                            autocomplete="organization-title"
+                            pattern="[A-Za-z -]{7,}"
+                            placeholder="Example: General Manager">
+                    </label>
+
+
+                    <label for="email">
+                        Email Address *
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            title="Enter your email address"
+                            autocomplete="email"
+                            placeholder="example@email.com"
+                            required>
+                    </label>
+
+
+                    <label for="mobile">
+                        Mobile Phone *
+                        <input
+                            id="mobile"
+                            name="mobile"
+                            type="tel"
+                            title="Enter your mobile phone number"
+                            autocomplete="tel"
+                            required>
+                    </label>
+
+
+                    <label for="organization">
+                        Business or Organization Name *
+                        <input
+                            id="organization"
+                            name="organization"
+                            type="text"
+                            title="Enter your business or organization name"
+                            autocomplete="organization"
+                            required>
+                    </label>
+
+
+                    <label for="membership">
+                        Membership Level *
+                        <select
+                            id="membership"
+                            name="membership"
+                            title="Select a membership level"
+                            required>
+
+                            <option value="">
+                                Select a membership level
+                            </option>
+
+                            <option value="np">
+                                NP Membership
+                            </option>
+
+                            <option value="bronze">
+                                Bronze Membership
+                            </option>
+
+                            <option value="silver">
+                                Silver Membership
+                            </option>
+
+                            <option value="gold">
+                                Gold Membership
+                            </option>
+
+                        </select>
+                    </label>
+
+
+                    <label for="description">
+                        Organization Description
+                        <textarea
+                            id="description"
+                            name="description"
+                            title="Describe your business or organization"
+                            rows="5"></textarea>
+                    </label>
+
+
+                    <input
+                        type="hidden"
+                        id="timestamp"
+                        name="timestamp">
+
+
+                    <input
+                        class="submit-button"
+                        type="submit"
+                        value="Submit Membership Application">
+
+                </form>
+
+            </section>
+
+
+            <!-- Membership Cards -->
+
+            <section class="membership-section"
+                aria-labelledby="membership-heading">
+
+                <h2 id="membership-heading">
+                    Membership Levels
+                </h2>
+
+                <div class="membership-cards">
+
+
+                    <article class="membership-card">
+
+                        <h3>NP Membership</h3>
+
+                        <p>
+                            A nonprofit membership option for eligible organizations.
+                        </p>
+
+                        <a href="#np-modal"
+                            class="membership-link"
+                            data-modal="np-modal">
+                            View Benefits
+                        </a>
+
+                    </article>
+
+
+                    <article class="membership-card">
+
+                        <h3>Bronze Membership</h3>
+
+                        <p>
+                            A basic membership option for local businesses.
+                        </p>
+
+                        <a href="#bronze-modal"
+                            class="membership-link"
+                            data-modal="bronze-modal">
+                            View Benefits
+                        </a>
+
+                    </article>
+
+
+                    <article class="membership-card">
+
+                        <h3>Silver Membership</h3>
+
+                        <p>
+                            Additional opportunities and benefits for growing businesses.
+                        </p>
+
+                        <a href="#silver-modal"
+                            class="membership-link"
+                            data-modal="silver-modal">
+                            View Benefits
+                        </a>
+
+                    </article>
+
+
+                    <article class="membership-card">
+
+                        <h3>Gold Membership</h3>
+
+                        <p>
+                            Expanded benefits and promotional opportunities for established businesses.
+                        </p>
+
+                        <a href="#gold-modal"
+                            class="membership-link"
+                            data-modal="gold-modal">
+                            View Benefits
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- NP Modal -->
+
+    <dialog id="np-modal">
+
+        <button class="modal-close"
+            type="button"
+            aria-label="Close NP membership information">
+            ×
+        </button>
+
+        <h2>NP Membership</h2>
+
+        <ul>
+            <li>No membership fee.</li>
+            <li>Access to selected chamber events.</li>
+            <li>Networking opportunities.</li>
+            <li>Access to nonprofit resources.</li>
+        </ul>
+
+    </dialog>
+
+
+    <!-- Bronze Modal -->
+
+    <dialog id="bronze-modal">
+
+        <button class="modal-close"
+            type="button"
+            aria-label="Close Bronze membership information">
+            ×
+        </button>
+
+        <h2>Bronze Membership</h2>
+
+        <ul>
+            <li>Access to chamber events.</li>
+            <li>Business networking opportunities.</li>
+            <li>Member directory listing.</li>
+            <li>Access to selected training activities.</li>
+        </ul>
+
+    </dialog>
+
+
+    <!-- Silver Modal -->
+
+    <dialog id="silver-modal">
+
+        <button class="modal-close"
+            type="button"
+            aria-label="Close Silver membership information">
+            ×
+        </button>
+
+        <h2>Silver Membership</h2>
+
+        <ul>
+            <li>All Bronze membership benefits.</li>
+            <li>Additional training opportunities.</li>
+            <li>Business promotion opportunities.</li>
+            <li>Priority access to selected events.</li>
+        </ul>
+
+    </dialog>
+
+
+    <!-- Gold Modal -->
+
+    <dialog id="gold-modal">
+
+        <button class="modal-close"
+            type="button"
+            aria-label="Close Gold membership information">
+            ×
+        </button>
+
+        <h2>Gold Membership</h2>
+
+        <ul>
+            <li>All Silver membership benefits.</li>
+            <li>Enhanced business promotion.</li>
+            <li>Additional networking opportunities.</li>
+            <li>Priority access to chamber activities.</li>
+        </ul>
+
+    </dialog>
+
+
+    <footer class="site-footer">
+
+        <div class="footer-inner">
+
+            <section class="footer-contact">
+
+                <h2>Santa Cruz Chamber of Commerce</h2>
+
+                <p>10 Calle Independencia</p>
+                <p>Santa Cruz de la Sierra, Bolivia</p>
+                <p>info@santacruzchamber.org</p>
+                <p>+591 3 333-4567</p>
+
+            </section>
+
+
+            <section class="footer-social">
+
+                <h2 class="sr-only">
+                    Social Media
+                </h2>
+
+                <div class="social-links">
+
+                    <a href="#"
+                        aria-label="YouTube"
+                        title="YouTube">
+                        ▶
+                    </a>
+
+                    <a href="#"
+                        aria-label="X"
+                        title="X">
+                        X
+                    </a>
+
+                    <a href="#"
+                        aria-label="LinkedIn"
+                        title="LinkedIn">
+                        in
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <section class="footer-project">
+
+                <p>WDD231 Class Project</p>
+
+                <p>Diane Steffy Chambi Gutierrez</p>
+
+                <p>
+                    &copy;
+                    <span id="current-year"></span>
+                    Santa Cruz Chamber of Commerce
+                </p>
+
+                <p>
+                    Last Modification:
+                    <span id="last-modified"></span>
+                </p>
+
+            </section>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

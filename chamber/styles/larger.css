@@ -226,3 +226,29 @@
     }
 
 }
+
+/* JOIN PAGE */
+
+@media screen and (min-width: 700px) {
+
+    .join-layout {
+        grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+        align-items: start;
+        gap: 2rem;
+    }
+
+    .join-form-section,
+    .membership-section {
+        padding: 1.5rem;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+
+    .join-layout {
+        grid-template-columns: minmax(0, 2fr) minmax(320px, 1fr);
+        gap: 2.5rem;
+    }
+
+}
