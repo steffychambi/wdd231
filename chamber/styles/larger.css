@@ -1,5 +1,4 @@
 @media screen and (min-width: 700px) {
-
     .header-inner {
         min-height: 90px;
         padding: 1rem 2rem;
@@ -36,26 +35,25 @@
         position: static;
         display: flex;
         flex-direction: row;
-        background-color: transparent;
         margin-left: 1.5rem;
         gap: 0.25rem;
+        background: none;
     }
 
     .navigation a {
         padding: 0.7rem 0.9rem;
+        border-bottom: 3px solid #00000000;
         font-size: 0.9rem;
-        color: var(--on-dark);
-        border-bottom: 3px solid transparent;
     }
 
     .navigation a.active {
-        background-color: var(--nav-bg);
-        color: var(--on-dark);
+        background: var(--nav-bg);
+        color: #ffffff;
         border-bottom-color: var(--blue);
     }
 
     .navigation a:hover {
-        background-color: var(--nav-bg);
+        background: var(--nav-bg);
         color: var(--blue);
     }
 
@@ -73,18 +71,16 @@
     }
 
     .main-heading h1 {
-        font-size: 2.2rem;
         margin-bottom: 0;
+        font-size: 2.2rem;
     }
 
-    /* grid */
+    /* directory */
 
     .members.grid-view {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.25rem;
     }
-
-    /* list */
 
     .members.list-view .member-card {
         grid-template-columns: 220px 1fr;
@@ -114,9 +110,8 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         align-items: center;
-        text-align: left;
-        gap: 2rem;
         padding: 1rem 2rem;
+        text-align: left;
     }
 
     .footer-social {
@@ -154,10 +149,7 @@
         grid-template-columns: 1fr 1fr;
     }
 
-    .forecast {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
+    .forecast,
     .spotlights {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -167,7 +159,6 @@
     .join-layout {
         grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
         align-items: start;
-        gap: 2rem;
     }
 
     .join-form-section,
@@ -177,7 +168,6 @@
 }
 
 @media screen and (min-width: 1000px) {
-
     .members.grid-view {
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;

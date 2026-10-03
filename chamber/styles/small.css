@@ -7,109 +7,47 @@
     --text: #222222;
     --gray: #666666;
     --border: #cccccc;
-    --placeholder: #dddddd;
     --footer: #f0f0f0;
-    --card-alt: #e5eee9;
     --error: #a00000;
 
     --header-bg: var(--green);
     --nav-bg: var(--dark-green);
-    --nav-active: var(--blue);
-
-    --control-bg: var(--white);
-    --control-border: var(--green);
-    --control-active: var(--green);
-
+    --card-bg: var(--white);
     --input-bg: var(--white);
     --input-border: var(--border);
-
-    --card-bg: var(--white);
-    --membership-bg: var(--light-green);
-    --summary-bg: var(--light-green);
-
-    --social-bg: var(--dark-green);
-    --social-hover: var(--blue);
-
-    --cta-bg: var(--blue);
-    --cta-hover: var(--dark-green);
-
-    --submit-bg: var(--green);
-    --submit-hover: var(--blue);
-
-    --link-hover: var(--dark-green);
-
-    --event-link: var(--dark-green);
-    --member-link: var(--text);
-    --spotlight-link: var(--dark-green);
-
-    --main-heading: var(--dark-green);
-
+    --link: var(--dark-green);
     --shadow: #00000014;
-    --hero-overlay: #00000059;
-    --hero-content-bg: #004d2bd9;
-    --dialog-overlay: #0000008c;
-    --dialog-shadow: #0000004d;
-
-    --on-dark: #ffffff;
-    --image-bg: #ffffff;
 }
 
 body.dark-mode {
+    --green: #006b3f;
+    --dark-green: #72e0aa;
+    --blue: #80c8ff;
     --light-green: #07110d;
     --white: #0d1b15;
     --text: #f4fff9;
     --gray: #c8ddd3;
     --border: #315347;
-    --placeholder: #1b3028;
     --footer: #050b08;
-
-    --dark-green: #72e0aa;
-    --blue: #80c8ff;
 
     --header-bg: #003820;
     --nav-bg: #002719;
-    --nav-active: #006b3f;
-
-    --control-bg: #10251c;
-    --control-border: #477463;
-    --control-active: #1769aa;
-
+    --card-bg: #0d1b15;
     --input-bg: #10251c;
     --input-border: #477463;
-
-    --card-bg: #0d1b15;
-    --membership-bg: #10251c;
-    --summary-bg: #10251c;
-
-    --social-bg: #0d5c3a;
-    --social-hover: #1769aa;
-
-    --cta-bg: #1769aa;
-    --cta-hover: #0d6b45;
-
-    --submit-bg: #006b3f;
-    --submit-hover: #1769aa;
-
-    --link-hover: #b9ddff;
-
-    --event-link: var(--blue);
-    --member-link: var(--blue);
-    --spotlight-link: var(--blue);
-
-    --main-heading: #f4fff9;
-
-    --image-bg: #ffffff;
+    --link: #80c8ff;
 }
 
 body {
-    font-family: "Nunito", sans-serif;
-    background-color: var(--light-green);
-    color: var(--text);
     min-width: 320px;
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    background: var(--light-green);
+    color: var(--text);
 }
 
 a {
-    color: var(--dark-green);
+    color: var(--link);
 }
 
 a:hover {
@@ -125,14 +63,13 @@ a:hover {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
-    border: 0;
 }
 
 /* header */
 
 .site-header {
-    background-color: var(--header-bg);
-    color: var(--on-dark);
+    background: var(--header-bg);
+    color: #ffffff;
 }
 
 .header-inner {
@@ -151,12 +88,12 @@ a:hover {
     display: flex;
     align-items: center;
     gap: 0.65rem;
-    color: var(--on-dark);
+    color: #ffffff;
 }
 
 .brand:hover {
+    color: #ffffff;
     text-decoration: none;
-    color: var(--on-dark);
 }
 
 .brand img {
@@ -192,19 +129,19 @@ a:hover {
 .menu-button {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    border: 2px solid var(--on-dark);
-    background-color: transparent;
-    color: var(--on-dark);
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    background: none;
+    color: #ffffff;
     font-size: 1.2rem;
 }
 
 .dark-mode-button:hover,
 .menu-button:hover {
-    background-color: var(--on-dark);
+    background: #ffffff;
     color: var(--header-bg);
 }
 
@@ -215,14 +152,14 @@ a:hover {
 /* navigation */
 
 .navigation {
-    display: none;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
     z-index: 100;
-    background-color: var(--nav-bg);
+    display: none;
     flex-direction: column;
+    background: var(--nav-bg);
 }
 
 .navigation.open {
@@ -230,16 +167,16 @@ a:hover {
 }
 
 .navigation a {
-    color: var(--on-dark);
     padding: 1rem;
+    color: #ffffff;
     text-align: center;
     font-weight: 700;
 }
 
 .navigation a:hover,
 .navigation a.active {
-    background-color: var(--nav-active);
-    color: var(--on-dark);
+    background: var(--green);
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -256,24 +193,23 @@ main {
 }
 
 .main-heading h1 {
-    color: var(--main-heading);
-    font-size: 2rem;
     margin-bottom: 1rem;
+    color: var(--dark-green);
+    font-size: 2rem;
 }
 
-/* view buttons */
+/* view controls */
 
 .view-controls {
     display: flex;
     justify-content: center;
-    gap: 0;
 }
 
 .view-button {
     min-width: 100px;
     padding: 0.65rem 1.5rem;
-    border: 1px solid var(--control-border);
-    background-color: var(--control-bg);
+    border: 1px solid var(--green);
+    background: var(--card-bg);
     color: var(--dark-green);
     font-weight: 700;
 }
@@ -288,11 +224,11 @@ main {
 
 .view-button:hover,
 .view-button.active {
-    background-color: var(--control-active);
-    color: var(--on-dark);
+    background: var(--green);
+    color: #ffffff;
 }
 
-/* members */
+/* directory */
 
 .members.grid-view {
     display: grid;
@@ -300,12 +236,18 @@ main {
     gap: 1rem;
 }
 
-/* cards */
+.member-card,
+.event-card,
+.spotlight-card,
+.weather-section,
+.join-form-section,
+.membership-section {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+}
 
 .member-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 4px;
     padding: 1rem;
     box-shadow: 0 1px 3px var(--shadow);
 }
@@ -315,24 +257,22 @@ main {
 }
 
 .card-header h2 {
+    margin-bottom: 0.25rem;
     color: var(--dark-green);
     font-size: 1.1rem;
-    margin-bottom: 0.25rem;
 }
 
 .card-header p {
+    margin-bottom: 0;
     color: var(--gray);
     font-size: 0.9rem;
-    margin-bottom: 0;
 }
 
 .card-divider {
     height: 1px;
-    background-color: var(--border);
     margin: 1rem 0;
+    background: var(--border);
 }
-
-/* card information */
 
 .card-content {
     display: grid;
@@ -344,18 +284,18 @@ main {
 .member-image {
     width: 110px;
     height: 100px;
-    background-color: var(--placeholder);
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    background: var(--border);
 }
 
 .member-image img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    background-color: var(--image-bg);
+    background: #ffffff;
 }
 
 .member-info {
@@ -371,38 +311,31 @@ main {
     margin-bottom: 0;
 }
 
-.member-info span {
-    font-weight: 800;
+.member-info span,
+.spotlight-info strong {
     color: var(--dark-green);
+    font-weight: 800;
 }
 
 .member-info a {
     display: block;
-    color: var(--member-link);
+    color: var(--link);
 }
-
-.member-info a:hover {
-    color: var(--link-hover);
-}
-
-/* list */
 
 .members.list-view {
     display: flex;
     flex-direction: column;
-    gap: 0;
 }
 
 .members.list-view .member-card {
-    border-radius: 0;
-    box-shadow: none;
     display: grid;
     grid-template-columns: 1fr;
-    padding: 1rem;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .members.list-view .member-card:nth-child(even) {
-    background-color: var(--card-alt);
+    background: var(--light-green);
 }
 
 .members.list-view .member-image {
@@ -412,9 +345,9 @@ main {
 /* footer */
 
 .site-footer {
-    background-color: var(--footer);
-    border-top: 4px solid var(--green);
     padding: 2rem 1rem 1rem;
+    border-top: 4px solid var(--green);
+    background: var(--footer);
 }
 
 .footer-inner {
@@ -422,22 +355,29 @@ main {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    text-align: center;
     gap: 2rem;
+    text-align: center;
 }
 
 .footer-contact h2 {
-    font-size: 1rem;
-    color: var(--dark-green);
     margin-bottom: 0.8rem;
+    color: var(--dark-green);
+    font-size: 1rem;
+}
+
+.footer-contact p,
+.footer-project p {
+    margin-bottom: 0.25rem;
 }
 
 .footer-contact p {
-    margin-bottom: 0.25rem;
     font-size: 0.85rem;
 }
 
-/* social media */
+.footer-project {
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
 
 .social-links {
     display: flex;
@@ -448,52 +388,38 @@ main {
 .social-links a {
     width: 42px;
     height: 42px;
-    border-radius: 50%;
-    background-color: var(--social-bg);
-    color: var(--on-dark);
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
+    background: var(--dark-green);
+    color: #ffffff;
     font-weight: 800;
     font-size: 0.9rem;
 }
 
 .social-links a:hover {
-    background-color: var(--social-hover);
-    color: var(--on-dark);
+    background: var(--blue);
+    color: #ffffff;
     text-decoration: none;
 }
 
-/* footer project */
-
-.footer-project {
-    font-size: 0.8rem;
-    line-height: 1.6;
-}
-
-.footer-project p {
-    margin-bottom: 0.2rem;
-}
-
-/* error */
-
 .error-message {
-    text-align: center;
     padding: 2rem;
     color: var(--error);
+    text-align: center;
 }
 
 /* home */
 
 .hero {
     position: relative;
-    overflow: hidden;
     margin: 0 -1rem 2rem;
+    overflow: hidden;
 }
 
 .hero img {
     width: 100%;
-    height: auto;
     min-height: 320px;
     object-fit: cover;
 }
@@ -502,81 +428,81 @@ main {
     content: "";
     position: absolute;
     inset: 0;
-    background: var(--hero-overlay);
+    background: #00000059;
 }
 
 .hero-content {
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: 2;
     width: 100%;
     padding: 1.5rem;
-    background-color: var(--hero-content-bg);
-    color: var(--on-dark);
-    z-index: 2;
+    background: #004d2bd9;
+    color: #ffffff;
 }
 
 .hero-content h2 {
-    font-size: 2rem;
     margin-bottom: 0.75rem;
+    font-size: 2rem;
 }
 
 .hero-content p {
-    font-size: 1rem;
     margin-bottom: 1.25rem;
 }
 
 .cta-button {
     display: inline-block;
     padding: 0.8rem 1.3rem;
-    background-color: var(--cta-bg);
-    color: var(--on-dark);
     border-radius: 5px;
+    background: var(--blue);
+    color: #ffffff;
     font-weight: 800;
 }
 
 .cta-button:hover {
-    background-color: var(--cta-hover);
-    color: var(--on-dark);
+    background: var(--dark-green);
+    color: #ffffff;
     text-decoration: none;
 }
-
-/* home sections */
 
 .home-section {
     margin-bottom: 2rem;
 }
 
-.home-section > h2 {
-    color: var(--dark-green);
+.home-section > h2,
+.forecast-container h3 {
     margin-bottom: 1rem;
+    color: var(--dark-green);
 }
 
 /* events */
 
-.events-content {
+.events-content,
+.spotlights {
     display: grid;
     gap: 1rem;
 }
 
-.event-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 5px;
+.event-card,
+.spotlight-card,
+.weather-section {
     padding: 1.25rem;
 }
 
-.event-card h3 {
-    color: var(--dark-green);
+.event-card h3,
+.spotlight-header h3 {
     margin-bottom: 0.5rem;
+    color: var(--dark-green);
 }
 
 .event-card p {
     margin-bottom: 0.75rem;
 }
 
-.event-card a {
-    color: var(--event-link);
+.event-card a,
+.spotlight-info a {
+    color: var(--link);
     font-weight: 700;
 }
 
@@ -587,31 +513,24 @@ main {
 
 /* weather */
 
-.weather-section {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 5px;
-    padding: 1.25rem;
-}
-
 .current-weather {
     display: grid;
     gap: 1rem;
 }
 
 .weather-label {
+    margin-bottom: 0.25rem;
+    color: var(--gray);
     font-size: 0.8rem;
     font-weight: 800;
     text-transform: uppercase;
-    color: var(--gray);
-    margin-bottom: 0.25rem;
 }
 
 .current-temp {
+    margin-bottom: 0;
     color: var(--dark-green);
     font-size: 2rem;
     font-weight: 800;
-    margin-bottom: 0;
 }
 
 #weather-description {
@@ -623,11 +542,6 @@ main {
     margin-top: 1.5rem;
 }
 
-.forecast-container h3 {
-    margin-bottom: 1rem;
-    color: var(--dark-green);
-}
-
 .forecast {
     display: grid;
     gap: 0.75rem;
@@ -637,7 +551,7 @@ main {
     padding: 1rem;
     border: 1px solid var(--border);
     border-radius: 5px;
-    background-color: var(--card-bg);
+    background: var(--card-bg);
     text-align: center;
 }
 
@@ -652,30 +566,13 @@ main {
 
 /* spotlights */
 
-.spotlights {
-    display: grid;
-    gap: 1rem;
-}
-
-.spotlight-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 5px;
-    padding: 1.25rem;
-}
-
 .spotlight-header {
     text-align: center;
 }
 
-.spotlight-header h3 {
-    color: var(--dark-green);
-    margin-bottom: 0.3rem;
-}
-
 .spotlight-header p {
-    color: var(--gray);
     margin-bottom: 1rem;
+    color: var(--gray);
 }
 
 .spotlight-image {
@@ -701,16 +598,8 @@ main {
     margin-bottom: 0.5rem;
 }
 
-.spotlight-info strong {
-    color: var(--dark-green);
-}
-
-.spotlight-info a {
-    color: var(--spotlight-link);
-}
-
 .spotlight-info a:hover {
-    color: var(--link-hover);
+    color: var(--blue);
 }
 
 /* join */
@@ -722,23 +611,18 @@ main {
 
 .join-form-section,
 .membership-section {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 5px;
     padding: 1.25rem;
 }
 
 .join-form-section h2,
 .membership-section h2 {
-    color: var(--dark-green);
     margin-bottom: 0.75rem;
+    color: var(--dark-green);
 }
 
 .join-form-section > p {
     margin-bottom: 1.5rem;
 }
-
-/* form */
 
 .join-form-section form {
     display: grid;
@@ -748,8 +632,8 @@ main {
 .join-form-section label {
     display: grid;
     gap: 0.4rem;
-    font-weight: 700;
     color: var(--text);
+    font-weight: 700;
 }
 
 .join-form-section input,
@@ -759,7 +643,7 @@ main {
     padding: 0.7rem;
     border: 1px solid var(--input-border);
     border-radius: 4px;
-    background-color: var(--input-bg);
+    background: var(--input-bg);
     color: var(--text);
 }
 
@@ -777,19 +661,18 @@ main {
 .submit-button {
     margin-top: 0.5rem;
     padding: 0.8rem 1.2rem;
-    border: none;
+    border: 0;
     border-radius: 5px;
-    background-color: var(--submit-bg);
-    color: var(--on-dark);
+    background: var(--green);
+    color: #ffffff;
     font-weight: 800;
-    cursor: pointer;
 }
 
 .submit-button:hover {
-    background-color: var(--submit-hover);
+    background: var(--blue);
 }
 
-/* membership cards */
+/* membership */
 
 .membership-cards {
     display: grid;
@@ -798,10 +681,10 @@ main {
 
 .membership-card {
     padding: 1.2rem;
-    background-color: var(--membership-bg);
     border: 1px solid var(--border);
     border-left: 5px solid var(--green);
     border-radius: 5px;
+    background: var(--light-green);
     animation: membershipCardEntry 0.7s ease-out both;
 }
 
@@ -818,8 +701,8 @@ main {
 }
 
 .membership-card h3 {
-    color: var(--dark-green);
     margin-bottom: 0.5rem;
+    color: var(--dark-green);
 }
 
 .membership-card p {
@@ -827,16 +710,13 @@ main {
 }
 
 .membership-link {
-    display: inline-block;
     color: var(--blue);
     font-weight: 800;
 }
 
 .membership-link:hover {
-    color: var(--link-hover);
+    color: var(--dark-green);
 }
-
-/* initial card animation */
 
 @keyframes membershipCardEntry {
     from {
@@ -859,19 +739,19 @@ dialog {
     padding: 1.5rem;
     border: 1px solid var(--border);
     border-radius: 6px;
-    background-color: var(--card-bg);
+    background: var(--card-bg);
     color: var(--text);
-    box-shadow: 0 0 3rem var(--dialog-shadow);
+    box-shadow: 0 0 3rem #0000004d;
 }
 
 dialog::backdrop {
-    background-color: var(--dialog-overlay);
+    background: #0000008c;
 }
 
 dialog h2 {
-    color: var(--dark-green);
     margin-bottom: 1rem;
     padding-right: 2rem;
+    color: var(--dark-green);
 }
 
 dialog ul {
@@ -892,25 +772,25 @@ dialog li {
     height: 38px;
     border: 1px solid var(--border);
     border-radius: 50%;
-    background-color: var(--input-bg);
+    background: var(--input-bg);
     color: var(--text);
     font-size: 1.4rem;
     line-height: 1;
 }
 
 .modal-close:hover {
-    background-color: var(--green);
-    color: var(--on-dark);
+    background: var(--green);
+    color: #ffffff;
 }
 
-/* thank you page */
+/* thank you */
 
 .application-summary {
     margin-top: 1.5rem;
     padding: 1rem;
     border: 1px solid var(--border);
     border-radius: 5px;
-    background-color: var(--summary-bg);
+    background: var(--light-green);
 }
 
 .application-summary p {
