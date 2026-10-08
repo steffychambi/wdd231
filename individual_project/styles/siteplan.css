@@ -1,0 +1,175 @@
+:root {
+    --navy: #172A46;
+    --teal: #0F766E;
+    --light-blue: #E8F3F8;
+    --white: #FFFFFF;
+    --dark-gray: #1F2937;
+    --border: #D7E3E8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    color: var(--dark-gray);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+}
+
+header p {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+main {
+    width: min(100% - 2rem, 1000px);
+    margin: 2rem auto;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background-color: var(--white);
+}
+
+h2 {
+    margin-top: 0;
+    color: var(--navy);
+    font-family: "Poppins", sans-serif;
+    border-bottom: 3px solid var(--teal);
+    padding-bottom: 0.4rem;
+}
+
+h3 {
+    color: var(--teal);
+    font-family: "Poppins", sans-serif;
+}
+
+p,
+li {
+    max-width: 120ch;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+
+/* Color Scheme */
+
+.colors {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.color-card {
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.color-sample {
+    width: 100%;
+    height: 70px;
+    margin-bottom: 0.75rem;
+    border: 1px solid #CCCCCC;
+    border-radius: 6px;
+}
+
+.navy {
+    background-color: #172A46;
+}
+
+.teal {
+    background-color: #0F766E;
+}
+
+.light-blue {
+    background-color: #E8F3F8;
+}
+
+.white {
+    background-color: #FFFFFF;
+}
+
+.dark-gray {
+    background-color: #1F2937;
+}
+
+
+/* Wireframes */
+
+.wireframes {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+
+.wireframe {
+    text-align: center;
+}
+
+.wireframe img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid var(--dark-gray);
+}
+
+
+/* Footer */
+
+footer {
+    background-color: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.25rem auto;
+}
+
+
+/* Larger View */
+
+@media screen and (min-width: 700px) {
+
+    header {
+        padding: 3rem 1rem;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    .wireframes {
+        grid-template-columns: 1fr;
+    }
+}
+
