@@ -4,12 +4,14 @@ const cardsContainer = document.querySelector("#discoverCards");
 const visitMessage = document.querySelector("#visitMessage");
 
 // Display a message based on the visitor's previous visit.
+
 function showVisitMessage() {
     if (!visitMessage) return;
 
     const storageKey = "discoverLastVisit";
     const now = Date.now();
-    const oneDay = 24 * 60 * 60 * 1000;
+    const oneMinute = 60 * 1000;
+    const oneDay = 24 * 60 * oneMinute;
 
     try {
         const storedVisit = localStorage.getItem(storageKey);
@@ -19,10 +21,20 @@ function showVisitMessage() {
             visitMessage.textContent =
                 "Welcome! Let us know if you have any questions.";
         } else {
-            const elapsed = now - lastVisit;
+            const elapsed = Math.max(0, now - lastVisit);
 
-            if (elapsed < oneDay) {
-                visitMessage.textContent = "Back so soon! Awesome!";
+            if (elapsed < oneMinute) {
+                const seconds = Math.floor(elapsed / 1000);
+                const unit = seconds === 1 ? "second" : "seconds";
+
+                visitMessage.textContent =
+                    `You last visited ${seconds} ${unit} ago.`;
+            } else if (elapsed < oneDay) {
+                const minutes = Math.floor(elapsed / oneMinute);
+                const seconds = Math.floor((elapsed % oneMinute) / 1000);
+
+                visitMessage.textContent =
+                    `You last visited ${minutes} min ${seconds} sec ago.`;
             } else {
                 const days = Math.floor(elapsed / oneDay);
                 const unit = days === 1 ? "day" : "days";
