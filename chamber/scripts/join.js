@@ -1,96 +1,43 @@
-const menuButton = document.querySelector("#menu-button");
-const navigation = document.querySelector("#navigation");
-const darkModeButton = document.querySelector("#dark-mode");
+// Add the form submission timestamp.
+const timestampInput = document.querySelector("#timestamp");
 
+if (timestampInput) {
+    timestampInput.value = new Date().toISOString();
+}
 
-/* Mobile navigation */
-
-menuButton.addEventListener("click", () => {
-
-    const isOpen = navigation.classList.toggle("open");
-
-    menuButton.setAttribute("aria-expanded", isOpen);
-
-    menuButton.setAttribute(
-        "aria-label",
-        isOpen ? "Close navigation menu" : "Open navigation menu"
-    );
-
-});
-
-
-/* Dark mode */
-
-darkModeButton.addEventListener("click", () => {
-
-    document.body.classList.toggle("dark-mode");
-
-    const darkModeEnabled = document.body.classList.contains("dark-mode");
-
-    darkModeButton.textContent = darkModeEnabled ? "☀" : "☾";
-
-});
-
-
-/* Footer */
-
-document.querySelector("#current-year").textContent = new Date().getFullYear();
-
-document.querySelector("#last-modified").textContent = document.lastModified;
-
-
-/* Form timestamp */
-
-document.querySelector("#timestamp").value = new Date().toISOString();
-
-
-/* Membership modals */
-
+// Membership information dialogs.
 const membershipLinks = document.querySelectorAll(".membership-link");
 
-const dialogs = document.querySelectorAll("dialog");
-
-
 membershipLinks.forEach((link) => {
-
     link.addEventListener("click", (event) => {
-
         event.preventDefault();
 
-        const modalId = link.getAttribute("data-modal");
+        const modalId = link.dataset.modal;
+        const modal = modalId
+            ? document.getElementById(modalId)
+            : null;
 
-        const modal = document.querySelector(`#${modalId}`);
-
-        modal.showModal();
-
+        if (modal && typeof modal.showModal === "function") {
+            modal.showModal();
+        }
     });
-
 });
 
-
-/* Close buttons */
+// Close dialog buttons and backdrop.
+const dialogs = document.querySelectorAll("dialog");
 
 dialogs.forEach((dialog) => {
-
     const closeButton = dialog.querySelector(".modal-close");
 
-    closeButton.addEventListener("click", () => {
-
-        dialog.close();
-
-    });
-
-
-/* Close when clicking the backdrop */
-
-dialog.addEventListener("click", (event) => {
-
-    if (event.target === dialog) {
-        
-        dialog.close();
-        
+    if (closeButton) {
+        closeButton.addEventListener("click", () => {
+            dialog.close();
+        });
     }
 
-});
-
+    dialog.addEventListener("click", (event) => {
+        if (event.target === dialog) {
+            dialog.close();
+        }
+    });
 });

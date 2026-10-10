@@ -1,7 +1,22 @@
-@media screen and (min-width: 700px) {
+
+/* Santa Cruz Chamber of Commerce
+   Tablet and desktop layouts */
+
+/* Tablet: 641px to 1024px */
+
+@media (min-width: 641px) {
+    main {
+        padding: 2rem 2rem 3rem;
+    }
+
+    /* Header */
+
     .header-inner {
+        width: min(100% - 3rem, var(--content-width));
         min-height: 90px;
-        padding: 1rem 2rem;
+        flex-wrap: nowrap;
+        gap: 1.5rem;
+        padding: 0.8rem 0;
     }
 
     .brand img {
@@ -10,14 +25,15 @@
     }
 
     .brand-text span:first-child {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
     }
 
     .brand-text span:last-child {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 
     .header-controls {
+        flex-shrink: 0;
         margin-left: auto;
     }
 
@@ -25,181 +41,243 @@
         display: none;
     }
 
-    .dark-mode-button {
-        order: 2;
-    }
-
-    /* navigation */
-
-    .navigation {
-        position: static;
+    .navigation,
+    .navigation.open {
         display: flex;
+        flex: 0 1 auto;
         flex-direction: row;
-        margin-left: 1.5rem;
+        align-items: center;
+        justify-content: flex-end;
         gap: 0.25rem;
-        background: none;
+        width: auto;
+        background-color: transparent;
     }
 
     .navigation a {
-        padding: 0.7rem 0.9rem;
-        border-bottom: 3px solid #00000000;
-        font-size: 0.9rem;
+        padding: 0.8rem;
+        border-top: 0;
+        border-radius: 4px;
     }
 
-    .navigation a.active {
-        background: var(--nav-bg);
-        color: #ffffff;
-        border-bottom-color: var(--blue);
-    }
-
-    .navigation a:hover {
-        background: var(--nav-bg);
-        color: var(--blue);
-    }
-
-    /* main */
-
-    main {
-        padding: 2.5rem 2rem 4rem;
-    }
+    /* Headings */
 
     .main-heading {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 2rem;
+        gap: 1rem;
     }
 
     .main-heading h1 {
         margin-bottom: 0;
-        font-size: 2.2rem;
     }
 
-    /* directory */
+    .view-controls {
+        justify-content: flex-end;
+    }
+
+    /* Directory */
 
     .members.grid-view {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 1.25rem;
     }
 
-    .members.list-view .member-card {
-        grid-template-columns: 220px 1fr;
-    }
-
-    .members.list-view .card-header {
-        text-align: left;
-    }
-
-    .members.list-view .card-divider {
-        display: none;
-    }
-
-    .members.list-view .card-content {
-        grid-template-columns: 150px 1fr;
-    }
-
-    .members.list-view .member-image {
-        display: flex;
-        width: 150px;
-        height: 100px;
-    }
-
-    /* footer */
-
-    .footer-inner {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        align-items: center;
-        padding: 1rem 2rem;
-        text-align: left;
-    }
-
-    .footer-social {
-        text-align: center;
-    }
-
-    .footer-project {
-        text-align: right;
-    }
-
-    /* home */
+    /* Homepage */
 
     .hero {
-        margin: 0 -2rem 2.5rem;
+        margin-right: -2rem;
+        margin-left: -2rem;
     }
 
     .hero img {
-        min-height: 400px;
+        min-height: 380px;
         max-height: 500px;
     }
 
-    .hero-content h2 {
-        font-size: 3rem;
-    }
-
-    .hero-content p {
-        font-size: 1.15rem;
+    .hero-content {
+        width: 75%;
+        max-width: 700px;
+        padding: 2rem;
     }
 
     .events-content {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .current-weather {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
     }
 
-    .forecast,
+    .forecast {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
     .spotlights {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    /* join */
+    /* Join */
 
     .join-layout {
-        grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
         align-items: start;
+        gap: 2rem;
     }
 
     .join-form-section,
     .membership-section {
         padding: 1.5rem;
     }
+
+    .membership-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Discover: tablet grid */
+
+
+    .discover-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-areas:
+            "place1 place1 place2 place2"
+            "place1 place1 place2 place2"
+            "place3 place3 place4 place4"
+            "place5 place5 place6 place6"
+            "place7 place7 place8 place8";
+        gap: 1.25rem;
+        align-items: stretch;
+    }
+
+    .place-card {
+        min-width: 0;
+    }
+
+    /* Footer */
+
+    .footer-inner {
+        display: grid;
+        grid-template-columns:
+            minmax(0, 1.2fr)
+            minmax(0, 0.8fr)
+            minmax(0, 1fr);
+        align-items: center;
+        gap: 1.5rem;
+        text-align: left;
+    }
+
+    .footer-contact,
+    .footer-social,
+    .footer-project {
+        min-width: 0;
+        margin: 0;
+        padding: 0;
+        align-self: center;
+    }
+
+    .footer-contact h2 {
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-social {
+        justify-self: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-project {
+        grid-column: auto;
+        justify-self: end;
+        text-align: right;
+        border-top: 0;
+        font-size: 0.9rem;
+    }
 }
 
-@media screen and (min-width: 1000px) {
+/* Desktop: 1025px and wider */
+
+@media (min-width: 1025px) {
+    /* Header */
+
+    .navigation {
+        gap: 0.5rem;
+    }
+
+    .navigation a {
+        padding: 0.85rem 1rem;
+    }
+
+    /* Directory */
+
     .members.grid-view {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 1.5rem;
     }
 
-    .member-card {
-        min-height: 225px;
-    }
-
-    .card-content {
-        grid-template-columns: 120px 1fr;
-    }
-
-    .member-image {
-        width: 120px;
-        height: 100px;
-    }
-
-    /* home */
-
-    .hero {
-        margin-bottom: 3rem;
-    }
+    /* Homepage */
 
     .hero img {
+        min-height: 420px;
         max-height: 520px;
     }
 
-    /* join */
+    .hero-content {
+        width: 60%;
+        max-width: 650px;
+        padding: 2.25rem;
+    }
 
-    .join-layout {
-        grid-template-columns: minmax(0, 2fr) minmax(320px, 1fr);
-        gap: 2.5rem;
+    .events-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .spotlights {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .current-weather {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Join */
+
+    .membership-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .join-form-section,
+    .membership-section {
+        padding: 1.75rem;
+    }
+
+    /* Discover: desktop grid */
+
+    .discover-grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        grid-template-areas:
+            "place1 place1 place2 place2 place3 place3"
+            "place1 place1 place2 place2 place3 place3"
+            "place4 place4 place4 place5 place5 place5"
+            "place6 place6 place7 place7 place8 place8";
+        gap: 1.5rem;
+        align-items: stretch;
+    }
+}
+
+/* Image hover effect only on larger screens
+   with a mouse or trackpad */
+
+@media (min-width: 1025px) and (hover: hover) and (pointer: fine) {
+    .place-card img {
+        transition: transform 0.25s ease, filter 0.25s ease;
+    }
+
+    .place-card img:hover {
+        transform: scale(1.04);
+        filter: brightness(1.08);
     }
 }

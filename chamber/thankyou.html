@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Thank You | Santa Cruz Chamber of Commerce</title>
-
     <meta name="description" content="Thank you for applying for membership in the Santa Cruz Chamber of Commerce.">
     <meta name="author" content="Diane Steffy Chambi Gutierrez">
 
-    <link rel="icon" href="images/chamber-logo.svg">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 
     <meta property="og:title" content="Thank You | Santa Cruz Chamber of Commerce">
     <meta property="og:description" content="Thank you for applying for membership in the Santa Cruz Chamber of Commerce.">
@@ -20,97 +18,73 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
+    <script src="scripts/main.js" defer></script>
     <script src="scripts/thankyou.js" defer></script>
 </head>
 
 <body>
-
     <header class="site-header">
-
         <div class="header-inner">
-
             <a class="brand" href="index.html">
-
                 <img src="images/chamber-logo.svg"
-                    alt="Santa Cruz Chamber of Commerce logo">
+                    alt="Santa Cruz Chamber of Commerce logo"
+                    width="48"
+                    height="48">
 
                 <div class="brand-text">
                     <span>Santa Cruz</span>
                     <span>Chamber of Commerce</span>
                 </div>
-
             </a>
 
-
             <div class="header-controls">
-
-                <button id="dark-mode"
+                <button id="themeButton"
                     class="dark-mode-button"
                     type="button"
-                    aria-label="Toggle dark mode"
+                    aria-label="Switch to dark mode"
                     title="Toggle dark mode">
                     ☾
                 </button>
 
-                <button id="menu-button"
+                <button id="menuButton"
                     class="menu-button"
                     type="button"
                     aria-label="Open navigation menu"
-                    aria-expanded="false">
+                    aria-expanded="false"
+                    aria-controls="navigation">
                     ☰
                 </button>
-
             </div>
 
-
-            <nav id="navigation"
-                class="navigation"
-                aria-label="Main navigation">
-
+            <nav id="navigation" class="navigation" aria-label="Main navigation">
                 <a href="index.html">Home</a>
-
                 <a href="directory.html">Directory</a>
-
                 <a href="join.html">Join</a>
-
                 <a href="discover.html">Discover</a>
-
             </nav>
-
         </div>
-
     </header>
 
-
     <main>
-
         <div class="main-heading">
             <h1>Thank You</h1>
         </div>
 
-
-        <section class="join-form-section"
-            aria-labelledby="application-heading">
-
-            <h2 id="application-heading">
-                Membership Application Received
-            </h2>
+        <section class="join-form-section" aria-labelledby="application-heading">
+            <h2 id="application-heading">Membership Application Received</h2>
 
             <p>
                 Thank you for submitting your membership application.
                 We received the following information:
             </p>
 
-
             <div class="application-summary">
-
                 <p>
                     <strong>First Name:</strong>
                     <span id="display-first-name"></span>
@@ -140,83 +114,45 @@
                     <strong>Application Date:</strong>
                     <span id="display-timestamp"></span>
                 </p>
-
             </div>
-
         </section>
-
     </main>
 
-
     <footer class="site-footer">
-
         <div class="footer-inner">
-
             <section class="footer-contact">
-
                 <h2>Santa Cruz Chamber of Commerce</h2>
-
                 <p>10 Calle Independencia</p>
                 <p>Santa Cruz de la Sierra, Bolivia</p>
                 <p>info@santacruzchamber.org</p>
                 <p>+591 3 333-4567</p>
-
             </section>
-
 
             <section class="footer-social">
-
-                <h2 class="sr-only">
-                    Social Media
-                </h2>
+                <h2 class="sr-only">Social Media</h2>
 
                 <div class="social-links">
-
-                    <a href="#"
+                    <a href="https://www.youtube.com/"
                         aria-label="YouTube"
-                        title="YouTube">
-                        ▶
-                    </a>
+                        title="YouTube"
+                        target="_blank"
+                        rel="noopener noreferrer">▶</a>
 
-                    <a href="#"
-                        aria-label="X"
-                        title="X">
-                        X
-                    </a>
-
-                    <a href="#"
+                    <a href="https://www.linkedin.com/"
                         aria-label="LinkedIn"
-                        title="LinkedIn">
-                        in
-                    </a>
-
+                        title="LinkedIn"
+                        target="_blank"
+                        rel="noopener noreferrer">in</a>
                 </div>
-
             </section>
-
 
             <section class="footer-project">
-
                 <p>WDD231 Class Project</p>
-
                 <p>Diane Steffy Chambi Gutierrez</p>
-
-                <p>
-                    &copy;
-                    <span id="current-year"></span>
-                    Santa Cruz Chamber of Commerce
-                </p>
-
-                <p>
-                    Last Modification:
-                    <span id="last-modified"></span>
-                </p>
-
+                <p>&copy; <span id="current-year"></span> Santa Cruz Chamber of Commerce</p>
+                <p>Last Modification: <span id="last-modified"></span></p>
             </section>
-
         </div>
-
     </footer>
-
 </body>
 </html>

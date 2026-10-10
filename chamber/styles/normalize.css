@@ -1,50 +1,127 @@
-* {
-    box-sizing: border-box;
+/* Normalize CSS */
+
+/* Make element sizing predictable */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
+/* Improve text rendering and page consistency */
 html {
-    line-height: 1.5;
-    -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
+/* Remove default body spacing */
 body {
-    margin: 0;
+  margin: 0;
+  min-height: 100vh;
 }
 
+/* Make semantic elements consistent */
 main {
-    display: block;
+  display: block;
 }
 
 h1,
 h2,
 h3,
-p {
-    margin-top: 0;
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-top: 0;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+/* Keep images responsive */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
 }
 
+img,
+video {
+  height: auto;
+}
+
+/* Use the same font settings for form controls */
 button,
 input,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
 }
 
-button {
-    cursor: pointer;
+/* Make buttons and interactive controls consistent */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  cursor: pointer;
 }
 
+button:disabled,
+input:disabled {
+  cursor: not-allowed;
+}
+
+/* Remove default link decoration */
 a {
-    text-decoration: none;
+  color: inherit;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+/* Consistent lists */
+ul,
+ol {
+  margin-top: 0;
+}
+
+/* Prevent text overflow */
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+li {
+  overflow-wrap: break-word;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Improve keyboard accessibility */
+:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 3px;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

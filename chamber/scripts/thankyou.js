@@ -1,84 +1,42 @@
-const menuButton = document.querySelector("#menu-button");
-const navigation = document.querySelector("#navigation");
-const darkModeButton = document.querySelector("#dark-mode");
-
-
-/* Mobile navigation */
-
-menuButton.addEventListener("click", () => {
-
-    const isOpen = navigation.classList.toggle("open");
-
-    menuButton.setAttribute("aria-expanded", isOpen);
-
-    menuButton.setAttribute(
-        "aria-label",
-        isOpen ? "Close navigation menu" : "Open navigation menu"
-    );
-
-});
-
-
-/* Dark mode */
-
-darkModeButton.addEventListener("click", () => {
-
-    document.body.classList.toggle("dark-mode");
-
-    const darkModeEnabled = document.body.classList.contains("dark-mode");
-
-    darkModeButton.textContent = darkModeEnabled ? "☀" : "☾";
-
-});
-
-
-/* Footer */
-
-document.querySelector("#current-year").textContent = new Date().getFullYear();
-
-document.querySelector("#last-modified").textContent = document.lastModified;
-
-
-/* Read form data */
-
+// Read submitted form data from the URL.
 const params = new URLSearchParams(window.location.search);
 
 const firstName = params.get("firstName") || "";
-
 const lastName = params.get("lastName") || "";
-
 const email = params.get("email") || "";
-
 const mobile = params.get("mobile") || "";
-
 const organization = params.get("organization") || "";
-
 const timestamp = params.get("timestamp") || "";
 
+// Display submitted information safely.
+function displayValue(elementId, value) {
+    const element = document.getElementById(elementId);
 
-/* Display form data */
+    if (element) {
+        element.textContent = value || "Not provided";
+    }
+}
 
-document.querySelector("#display-first-name").textContent = firstName;
+displayValue("display-first-name", firstName);
+displayValue("display-last-name", lastName);
+displayValue("display-email", email);
+displayValue("display-mobile", mobile);
+displayValue("display-organization", organization);
 
-document.querySelector("#display-last-name").textContent = lastName;
+// Format the form submission date.
+const timestampElement = document.querySelector("#display-timestamp");
 
-document.querySelector("#display-email").textContent = email;
+if (timestampElement) {
+    if (timestamp) {
+        const date = new Date(timestamp);
 
-document.querySelector("#display-mobile").textContent = mobile;
-
-document.querySelector("#display-organization").textContent = organization;
-
-
-/* Format timestamp */
-
-if (timestamp) {
-
-    const date = new Date(timestamp);
-
-    document.querySelector("#display-timestamp").textContent = date.toLocaleString();
-
-} else {
-
-    document.querySelector("#display-timestamp").textContent = "Not available";
-
+        timestampElement.textContent = Number.isNaN(date.getTime())
+            ? "Not available"
+            : date.toLocaleString("en-US", {
+                dateStyle: "medium",
+                timeStyle: "short"
+            });
+    } else {
+        timestampElement.textContent = "Not available";
+    }
 }

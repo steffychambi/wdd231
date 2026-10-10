@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Discover | Santa Cruz Chamber of Commerce</title>
+    <meta name="description" content="Discover interesting places, landmarks, culture, and attractions in Santa Cruz de la Sierra, Bolivia.">
+    <meta name="author" content="Diane Steffy Chambi Gutierrez">
+
+    <meta property="og:title" content="Discover Santa Cruz | Chamber of Commerce">
+    <meta property="og:description" content="Explore the places and attractions of Santa Cruz de la Sierra, Bolivia.">
+    <meta property="og:image" content="https://steffychambi.github.io/wdd231/chamber/images/social-image.webp">
+    <meta property="og:url" content="https://steffychambi.github.io/wdd231/chamber/discover.html">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/main.js" defer></script>
+    <script type="module" src="scripts/discover.js"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">
+                <img src="images/chamber-logo.svg" alt="Santa Cruz Chamber of Commerce logo" width="48" height="48">
+                <div class="brand-text">
+                    <span>Santa Cruz</span>
+                    <span>Chamber of Commerce</span>
+                </div>
+            </a>
+
+            <div class="header-controls">
+                <button id="themeButton" class="dark-mode-button" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">☾</button>
+                <button id="menuButton" class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+            </div>
+
+            <nav id="navigation" class="navigation" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="directory.html">Directory</a>
+                <a href="join.html">Join</a>
+                <a href="discover.html" class="active" aria-current="page">Discover</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="discover-main">
+        <div class="main-heading">
+            <h1>Discover Santa Cruz</h1>
+        </div>
+
+        <section id="visitMessage" class="visit-message" aria-live="polite"></section>
+
+        <p class="discover-intro">
+            Discover the culture, nature, history, and attractions of
+            Santa Cruz de la Sierra. Explore some of the places that make
+            our region a wonderful place to live, visit, and do business.
+        </p>
+
+        <section id="discoverCards" class="discover-grid" aria-label="Places of interest">
+            <p>Loading places of interest...</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <section class="footer-contact">
+                <h2>Santa Cruz Chamber of Commerce</h2>
+                <p>10 Calle Independencia</p>
+                <p>Santa Cruz de la Sierra, Bolivia</p>
+                <p>info@santacruzchamber.org</p>
+                <p>+591 3 333-4567</p>
+            </section>
+
+            <section class="footer-social">
+                <h2 class="sr-only">Social Media</h2>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/" aria-label="YouTube" title="YouTube" target="_blank" rel="noopener">▶</a>
+                    <a href="https://www.linkedin.com/" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener">in</a>
+                </div>
+            </section>
+
+            <section class="footer-project">
+                <p>WDD231 Class Project</p>
+                <p>Diane Steffy Chambi Gutierrez</p>
+                <p>&copy; <span id="current-year"></span> Santa Cruz Chamber of Commerce</p>
+                <p>Last Modification: <span id="last-modified"></span></p>
+            </section>
+        </div>
+    </footer>
+</body>
+</html>
