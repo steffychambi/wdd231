@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover hands-on physics experiments, clear laboratory guides, and practical resources for students.">
+    <meta name="author" content="Diane Steffy Chambi Gutierrez">
+    <meta name="theme-color" content="#172A46">
+
+    <meta property="og:title" content="Physics Lab Guide">
+    <meta property="og:description" content="Explore physics through hands-on experiments and clear laboratory guides.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://steffychambi.github.io/wdd231/individual_project/">
+    <meta property="og:image" content="https://steffychambi.github.io/wdd231/individual_project/images/social-image.webp">
+
+    <title>Home | Physics Lab Guide</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script type="module" src="scripts/main.js"></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-icon" aria-hidden="true"></span>
+                <span>Physics Lab Guide</span>
+            </a>
+
+            <div class="header-actions">
+                <button
+                    class="theme-toggle"
+                    id="themeToggle"
+                    type="button"
+                    aria-label="Activate dark mode"
+                    aria-pressed="false"
+                >
+                    🌙 Dark mode
+                </button>
+
+                <button
+                    class="menu-toggle"
+                    id="menu-toggle"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="site-navigation"
+                >
+                    ☰
+                </button>
+            </div>
+
+            <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="experiments.html">Experiments</a>
+                <a href="resources.html">Resources</a>
+                <a href="contact.html" aria-current="page">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="page-main">
+        <section class="page-heading">
+            <h1>Contact and Suggestions</h1>
+            <p>
+                Share feedback or suggest a physics experiment that would
+                be useful to students.
+            </p>
+        </section>
+
+        <div class="contact-layout">
+            <section class="resource-card">
+                <h2>Help Improve the Guide</h2>
+                <p>
+                    Your suggestions can help identify topics, activities,
+                    and explanations that could be added to this website.
+                </p>
+                <p>
+                    Please do not include sensitive or confidential information.
+                </p>
+            </section>
+
+            <form class="contact-form" action="form-action.html" method="get">
+                <h2>Send a Suggestion</h2>
+
+                <label for="name">Full Name *</label>
+                <input id="name" name="name" type="text"
+                    autocomplete="name" minlength="2" maxlength="70" required>
+
+                <label for="email">Email Address *</label>
+                <input id="email" name="email" type="email"
+                    autocomplete="email" required>
+
+                <label for="reason">Reason for Contact *</label>
+                <select id="reason" name="reason" required>
+                    <option value="">Select a reason</option>
+                    <option value="Experiment suggestion">Experiment suggestion</option>
+                    <option value="Website feedback">Website feedback</option>
+                    <option value="Correction">Correction</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="topic">Physics Topic</label>
+                <select id="topic" name="topic">
+                    <option value="">Select a topic</option>
+                    <option value="Error Theory">Error Theory</option>
+                    <option value="Vectors">Vectors</option>
+                    <option value="Simple Machines">Simple Machines</option>
+                    <option value="Kinematics">Kinematics</option>
+                    <option value="Dynamics">Dynamics</option>
+                    <option value="Energy">Energy</option>
+                    <option value="Angular Momentum">Angular Momentum</option>
+                </select>
+
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" rows="6"
+                    minlength="10" maxlength="1000" required></textarea>
+
+                <p class="form-note">
+                    This demonstration displays your submission on the next page.
+                    It does not send an email.
+                </p>
+
+                <button class="button button-primary" type="submit">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            © <span id="current-year"></span> Physics Lab Guide.
+            Diane Steffy Chambi Gutierrez
+        </p>
+        <div class="footer-links">
+            <a href="attributions.html">Attributions</a>
+            <span aria-hidden="true">|</span>
+            <a href="" target="_blank" rel="noopener noreferrer">Video Demo</a>
+        </div>
+        <p id="last-modified"></p>
+    </footer>
+</body>
+</html>

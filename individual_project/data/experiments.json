@@ -1,0 +1,403 @@
+[
+  {
+    "id": 1,
+    "name": "Measure the Period of a Pendulum",
+    "topic": "Error Theory",
+    "difficulty": "Beginner",
+    "duration": 30,
+    "image": "images/simple-pendulum.webp",
+    "imageAlt": "A pendulum suspended from a laboratory support",
+    "description": "Measure the period of a pendulum by recording the time required for several oscillations.",
+    "purpose": "Practice physical measurements and apply error theory to experimental results.",
+    "materials": [
+      "Universal stand",
+      "String",
+      "Small sphere",
+      "Stopwatch",
+      "Ruler",
+      "Universal clamps"
+    ],
+    "procedure": [
+      "Set up the pendulum using the stand, string, and sphere.",
+      "Measure and record the pendulum length.",
+      "Displace the sphere slightly from its equilibrium position and release it.",
+      "Measure the time required for several complete oscillations.",
+      "Repeat the measurement and calculate the average period.",
+      "Compare the measurements and discuss possible sources of experimental error."
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Experimental Determination of Gravitational Acceleration",
+    "topic": "Error Theory",
+    "difficulty": "Intermediate",
+    "duration": 40,
+    "image": "images/gravitational-acceleration.webp",
+    "imageAlt": "A pendulum used to investigate gravitational acceleration",
+    "description": "Determine gravitational acceleration experimentally by measuring the length and period of a pendulum.",
+    "purpose": "Calculate gravitational acceleration from experimental measurements and analyze measurement errors.",
+    "materials": [
+      "Universal stand",
+      "String",
+      "Small sphere",
+      "Ruler",
+      "Stopwatch",
+      "Universal clamps"
+    ],
+    "procedure": [
+      "Assemble a pendulum and measure its length.",
+      "Displace the sphere slightly and release it.",
+      "Measure the time required for several complete oscillations.",
+      "Repeat the measurements to improve reliability.",
+      "Calculate the period using the measured time and number of oscillations.",
+      "Use the pendulum length and period to estimate gravitational acceleration.",
+      "Compare the experimental result with the accepted value and discuss sources of error."
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Parallelogram of Forces",
+    "topic": "Vectors",
+    "difficulty": "Intermediate",
+    "duration": 40,
+    "image": "images/parallelogram-of-forces.webp",
+    "imageAlt": "Force vectors represented by a parallelogram diagram",
+    "description": "Investigate the resultant of concurrent forces using the parallelogram method.",
+    "purpose": "Verify experimentally the parallelogram method for combining forces.",
+    "materials": [
+      "Three dynamometers",
+      "Force table or suitable support",
+      "Strings",
+      "Masses",
+      "Protractor",
+      "Ruler"
+    ],
+    "procedure": [
+      "Set up the apparatus so that the forces act concurrently.",
+      "Connect the strings and dynamometers according to the laboratory arrangement.",
+      "Record the magnitude and direction of the forces.",
+      "Represent the forces as vectors using an appropriate scale.",
+      "Construct the parallelogram and determine the resultant graphically.",
+      "Compare the graphical result with the experimental arrangement and discuss differences."
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Potential Block and Tackle",
+    "topic": "Simple Machines",
+    "difficulty": "Intermediate",
+    "duration": 40,
+    "image": "images/potential-block-and-tackle.webp",
+    "imageAlt": "A pulley system used to study mechanical advantage",
+    "description": "Explore the operation of a potential block-and-tackle system and the relationship between applied force and load.",
+    "purpose": "Understand the operating principle of a potential pulley system and investigate its mechanical advantage.",
+    "materials": [
+      "Pulleys",
+      "Support stand",
+      "String",
+      "Masses",
+      "Dynamometer"
+    ],
+    "procedure": [
+      "Assemble the pulley system using the available laboratory apparatus.",
+      "Attach the load to the moving part of the system.",
+      "Apply force through the string and observe the movement of the load.",
+      "Measure the applied force using the dynamometer.",
+      "Record the load and applied-force measurements.",
+      "Compare the applied force with the load and discuss the mechanical advantage."
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Lever",
+    "topic": "Simple Machines",
+    "difficulty": "Beginner",
+    "duration": 35,
+    "image": "images/lever.webp",
+    "imageAlt": "A lever resting on a fulcrum with loads at different distances",
+    "description": "Investigate how the position of the fulcrum and the applied force affect the behavior of a lever.",
+    "purpose": "Understand the basic principle of the lever and the relationship between force and lever arm.",
+    "materials": [
+      "Lever bar",
+      "Fulcrum or support",
+      "Masses",
+      "Ruler",
+      "Dynamometer, if available"
+    ],
+    "procedure": [
+      "Place the lever bar on its support.",
+      "Position a load at a measured distance from the fulcrum.",
+      "Apply force at another point until the lever reaches equilibrium.",
+      "Record the load, applied force, and corresponding distances.",
+      "Repeat the experiment using different positions.",
+      "Compare the results and discuss the principle of moments."
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Uniform Rectilinear Motion (MRU)",
+    "topic": "Kinematics",
+    "difficulty": "Beginner",
+    "duration": 35,
+    "image": "images/uniform-rectilinear-motion.webp",
+    "imageAlt": "A cart moving along a straight laboratory track",
+    "description": "Study motion along a straight path and investigate the relationship between distance, time, and constant velocity.",
+    "purpose": "Verify experimentally the characteristics of uniform rectilinear motion.",
+    "materials": [
+      "Dynamics cart or moving object",
+      "Straight track",
+      "Stopwatch or timing system",
+      "Ruler or measuring scale",
+      "Support blocks, if needed"
+    ],
+    "procedure": [
+      "Set up the track and prepare the cart for motion.",
+      "Establish several measurement positions along the track.",
+      "Release or move the cart under the conditions specified by the laboratory setup.",
+      "Record the time taken to reach each position.",
+      "Calculate the average velocity for the measured intervals.",
+      "Prepare distance-versus-time data and analyze whether the motion is approximately uniform."
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Uniformly Accelerated Rectilinear Motion (MRUV)",
+    "topic": "Kinematics",
+    "difficulty": "Intermediate",
+    "duration": 40,
+    "image": "images/uniformly-accelerated-motion.webp",
+    "imageAlt": "A cart moving along an inclined laboratory track",
+    "description": "Investigate straight-line motion in which velocity changes over time due to acceleration.",
+    "purpose": "Study uniformly accelerated motion using experimental measurements of position and time.",
+    "materials": [
+      "Dynamics cart or moving object",
+      "Track or inclined plane",
+      "Stopwatch or timing system",
+      "Ruler or measuring scale",
+      "Support blocks, if needed"
+    ],
+    "procedure": [
+      "Prepare the track and arrange the apparatus for accelerated motion.",
+      "Identify and record the measurement positions.",
+      "Release the cart under consistent initial conditions.",
+      "Measure the time associated with each position.",
+      "Repeat the measurements to check consistency.",
+      "Analyze the position and time data to investigate the acceleration."
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Free Fall",
+    "topic": "Kinematics",
+    "difficulty": "Beginner",
+    "duration": 35,
+    "image": "images/free-fall.webp",
+    "imageAlt": "An object falling vertically during a physics experiment",
+    "description": "Investigate the vertical motion of a falling object and estimate gravitational acceleration.",
+    "purpose": "Study free-fall motion and experimentally determine the acceleration due to gravity.",
+    "materials": [
+      "Falling object",
+      "Measuring scale",
+      "Timing system or stopwatch",
+      "Release mechanism, if available"
+    ],
+    "procedure": [
+      "Set up the apparatus in a safe location with a clear falling path.",
+      "Measure the vertical distance through which the object will fall.",
+      "Release the object from rest according to the apparatus instructions.",
+      "Record the fall time using the available timing system.",
+      "Repeat the measurement for consistency.",
+      "Use the measured distance and time to estimate gravitational acceleration.",
+      "Discuss measurement uncertainty and possible experimental errors."
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Projectile Motion",
+    "topic": "Kinematics",
+    "difficulty": "Intermediate",
+    "duration": 45,
+    "image": "images/projectile-motion.webp",
+    "imageAlt": "A ball following a curved projectile trajectory",
+    "description": "Study the trajectory and horizontal range of a projectile launched at different angles or initial conditions.",
+    "purpose": "Investigate projectile motion and compare experimental ranges with theoretical predictions.",
+    "materials": [
+      "Projectile launcher or suitable launching apparatus",
+      "Projectile",
+      "Protractor",
+      "Measuring tape",
+      "Landing surface or target paper"
+    ],
+    "procedure": [
+      "Set up the launching apparatus securely.",
+      "Measure or set the launch angle according to the experiment instructions.",
+      "Launch the projectile and measure its horizontal range.",
+      "Repeat the measurement under the same conditions.",
+      "Change the launch angle or another specified variable.",
+      "Record and compare the measured ranges.",
+      "Discuss the relationship between launch conditions and projectile trajectory."
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Circular Motion",
+    "topic": "Kinematics",
+    "difficulty": "Intermediate",
+    "duration": 40,
+    "image": "images/circular-motion.webp",
+    "imageAlt": "A rotating apparatus used to study circular motion",
+    "description": "Investigate circular motion and the relationship between angular and linear quantities.",
+    "purpose": "Study circular motion and determine linear quantities from angular measurements.",
+    "materials": [
+      "Circular-motion apparatus",
+      "Rotating object",
+      "Ruler or measuring scale",
+      "Stopwatch",
+      "Support stand"
+    ],
+    "procedure": [
+      "Set up the circular-motion apparatus according to the laboratory instructions.",
+      "Measure the radius of the circular path.",
+      "Set the object in circular motion.",
+      "Measure the time required for a known number of revolutions.",
+      "Calculate the period and frequency.",
+      "Determine the angular velocity and corresponding linear velocity.",
+      "Compare the calculated quantities and discuss the motion."
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Atwood Machine",
+    "topic": "Dynamics",
+    "difficulty": "Intermediate",
+    "duration": 45,
+    "image": "images/atwood-machine.webp",
+    "imageAlt": "Two masses connected by a string over a pulley",
+    "description": "Study the motion of two connected masses and investigate how their mass difference affects acceleration.",
+    "purpose": "Apply Newton's laws and verify the relationship between mass distribution and theoretical acceleration.",
+    "materials": [
+      "Pulley",
+      "String",
+      "Two masses or mass holders",
+      "Support stand",
+      "Stopwatch or timing system",
+      "Measuring scale"
+    ],
+    "procedure": [
+      "Assemble the pulley and suspend the two masses using the string.",
+      "Measure and record the masses used in the experiment.",
+      "Position the masses so the system can move freely.",
+      "Release the system from rest and measure its motion using the available timing method.",
+      "Repeat the measurements to improve reliability.",
+      "Calculate the theoretical acceleration using the measured masses.",
+      "Compare the experimental and theoretical results and discuss possible sources of error."
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Static and Kinetic Friction on an Inclined Plane",
+    "topic": "Dynamics",
+    "difficulty": "Intermediate",
+    "duration": 45,
+    "image": "images/friction-inclined-plane.webp",
+    "imageAlt": "A block resting on an inclined plane",
+    "description": "Investigate the conditions under which an object begins to slide and continues moving on an inclined plane.",
+    "purpose": "Determine static and kinetic friction coefficients and study motion on an inclined plane.",
+    "materials": [
+      "Inclined plane",
+      "Block or test object",
+      "Protractor or angle scale",
+      "Ruler",
+      "Dynamometer, if required by the setup"
+    ],
+    "procedure": [
+      "Place the object on the inclined plane.",
+      "Increase the inclination gradually until the object begins to slide.",
+      "Record the angle at which motion begins.",
+      "Use the measured angle and the appropriate physical relationship to estimate the static friction coefficient.",
+      "Investigate the object while it is sliding using the method specified by the laboratory setup.",
+      "Record the required measurements and estimate the kinetic friction coefficient.",
+      "Compare the two coefficients and discuss experimental uncertainty."
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Spring and Elastic Potential Energy",
+    "topic": "Energy",
+    "difficulty": "Intermediate",
+    "duration": 40,
+    "image": "images/spring-energy.webp",
+    "imageAlt": "A spring used to investigate elastic deformation",
+    "description": "Explore the deformation of a spring under an applied load and investigate the relationship between force and extension.",
+    "purpose": "Proposed activity to investigate spring behavior and elastic potential energy.",
+    "materials": [
+      "Spring",
+      "Support stand",
+      "Masses or applied loads",
+      "Ruler",
+      "Mass hanger, if available"
+    ],
+    "procedure": [
+      "Secure the spring to a suitable support.",
+      "Measure and record its initial length.",
+      "Apply a load and measure the resulting extension.",
+      "Repeat with different loads, staying within the spring's safe elastic range.",
+      "Record the applied loads and corresponding extensions.",
+      "Plot force against extension and examine the relationship.",
+      "Discuss how energy may be stored in the deformed spring."
+    ]
+  },
+  {
+    "id": 14,
+    "name": "The Loop-the-Loop",
+    "topic": "Energy",
+    "difficulty": "Advanced",
+    "duration": 45,
+    "image": "images/loop-the-loop.webp",
+    "imageAlt": "A small sphere traveling through a vertical loop track",
+    "description": "Investigate the minimum release height required for a sphere to complete a vertical loop.",
+    "purpose": "Study conservation of mechanical energy and compare theoretical predictions with experimental observations.",
+    "materials": [
+      "Loop track",
+      "Small sphere",
+      "Support structure",
+      "Measuring scale",
+      "Landing or range-measurement surface"
+    ],
+    "procedure": [
+      "Set up the loop track and verify that the apparatus is secure.",
+      "Identify the reference point and measure the relevant dimensions of the track.",
+      "Release the sphere from a selected height without giving it an additional push.",
+      "Observe whether the sphere completes the loop.",
+      "Repeat using different release heights.",
+      "Determine the lowest tested height at which the sphere completes the loop under the experimental conditions.",
+      "Compare the observations with predictions based on conservation of mechanical energy and discuss differences."
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Angular Impulse and Conservation of Angular Momentum",
+    "topic": "Angular Momentum",
+    "difficulty": "Advanced",
+    "duration": 35,
+    "image": "images/angular-impulse.webp",
+    "imageAlt": "A person rotating on a stool while changing the position of their arms",
+    "description": "Observe how changing the distribution of mass around a rotating body affects its rotational motion.",
+    "purpose": "Observe the conservation of angular momentum when the external torque on a rotating system is negligible.",
+    "materials": [
+      "Rotating stool or platform",
+      "Two handheld weights",
+      "Suitable open space",
+      "Instructor supervision"
+    ],
+    "procedure": [
+      "Ensure that the rotating platform is stable and the surrounding area is clear.",
+      "Following the instructor's safety directions, have a participant sit or stand on the rotating platform while holding a weight in each hand.",
+      "Begin rotating at a controlled speed with the arms extended.",
+      "Bring the arms closer to the body as instructed.",
+      "Observe the change in rotational speed.",
+      "Repeat the observation with consistent conditions when safe to do so.",
+      "Discuss the observations using the principles of moment of inertia and conservation of angular momentum."
+    ]
+  }
+]

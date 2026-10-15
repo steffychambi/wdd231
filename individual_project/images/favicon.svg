@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <!-- Fondo Circular Oscuro -->
+  <circle cx="250" cy="250" r="230" fill="#0D2343" />
+  
+  <!-- Órbita Vertical -->
+  <ellipse cx="250" cy="250" rx="65" ry="200" fill="none" stroke="#2BB6A3" stroke-width="12" transform="rotate(0 250 250)" />
+  
+  <!-- Órbita Diagonal Izquierda -->
+  <ellipse cx="250" cy="250" rx="65" ry="200" fill="none" stroke="#FFFFFF" stroke-width="12" transform="rotate(-60 250 250)" />
+  
+  <!-- Órbita Diagonal Derecha -->
+  <ellipse cx="250" cy="250" rx="65" ry="200" fill="none" stroke="#FFFFFF" stroke-width="12" transform="rotate(60 250 250)" />
+  
+  <!-- Núcleo Central -->
+  <circle cx="250" cy="250" r="45" fill="#2BB6A3" />
+  <!-- Brillo del Núcleo -->
+  <path d="M 225,230 A 30,30 0 0,1 250,210" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" />
+  
+  <!-- Electrón Superior (En Órbita Vertical) -->
+  <circle cx="295" cy="85" r="18" fill="#2BB6A3" stroke="#0D2343" stroke-width="3" />
+  <path d="M 287,77 A 10,10 0 0,1 295,71" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+  
+  <!-- Electrón Inferior Derecho (En Órbita Diagonal Derecha) -->
+  <circle cx="370" cy="315" r="18" fill="#2BB6A3" stroke="#0D2343" stroke-width="3" />
+  <path d="M 362,307 A 10,10 0 0,1 370,301" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+  
+  <!-- Electrón Lateral Izquierdo (En Órbita Diagonal Izquierda) -->
+  <circle cx="125" cy="300" r="18" fill="#2BB6A3" stroke="#0D2343" stroke-width="3" />
+  <path d="M 117,292 A 10,10 0 0,1 125,286" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+</svg>
+

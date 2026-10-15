@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover hands-on physics experiments, clear laboratory guides, and practical resources for students.">
+    <meta name="author" content="Diane Steffy Chambi Gutierrez">
+    <meta name="theme-color" content="#172A46">
+
+    <meta property="og:title" content="Physics Lab Guide">
+    <meta property="og:description" content="Explore physics through hands-on experiments and clear laboratory guides.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://steffychambi.github.io/wdd231/individual_project/">
+    <meta property="og:image" content="https://steffychambi.github.io/wdd231/individual_project/images/social-image.webp">
+
+    <title>Home | Physics Lab Guide</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script type="module" src="scripts/main.js"></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-icon" aria-hidden="true"></span>
+                <span>Physics Lab Guide</span>
+            </a>
+
+            <div class="header-actions">
+                <button
+                    class="theme-toggle"
+                    id="themeToggle"
+                    type="button"
+                    aria-label="Activate dark mode"
+                    aria-pressed="false"
+                >
+                    🌙 Dark mode
+                </button>
+
+                <button
+                    class="menu-toggle"
+                    id="menu-toggle"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="site-navigation"
+                >
+                    ☰
+                </button>
+            </div>
+
+            <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="experiments.html">Experiments</a>
+                <a href="resources.html" aria-current="page">Resources</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="page-main">
+        <section class="page-heading">
+            <h1>Physics I Laboratory Resources</h1>
+            <p>
+                Review the fundamental concepts of Physics I, prepare your
+                laboratory equipment, record measurements, and analyze
+                experimental results.
+            </p>
+        </section>
+
+        <section class="resource-grid">
+            <article class="resource-card">
+                <span class="resource-number">01</span>
+                <h2>Measurement and Error Analysis</h2>
+                <p>Understand how measurements and experimental errors affect your results.</p>
+                <ul>
+                    <li>Identify the physical quantity being measured.</li>
+                    <li>Record measurements with the correct units.</li>
+                    <li>Consider instrument precision and measurement uncertainty.</li>
+                    <li>Repeat measurements when required by the procedure.</li>
+                    <li>Calculate averages and analyze experimental errors.</li>
+                </ul>
+            </article>
+
+            <article class="resource-card">
+                <span class="resource-number">02</span>
+                <h2>Laboratory Safety</h2>
+                <p>Follow safe practices when working with equipment, forces, and moving objects.</p>
+                <ul>
+                    <li>Follow the instructor's directions before starting an experiment.</li>
+                    <li>Inspect equipment, supports, strings, and moving components.</li>
+                    <li>Keep the work area clear of unnecessary objects.</li>
+                    <li>Handle weights and mechanical equipment carefully.</li>
+                    <li>Report damaged equipment or unsafe conditions.</li>
+                </ul>
+            </article>
+
+            <article class="resource-card">
+                <span class="resource-number">03</span>
+                <h2>Equipment and Measurements</h2>
+                <p>Choose appropriate instruments for the physical quantities studied in Physics I.</p>
+                <ul>
+                    <li>Check the measuring range and resolution of each instrument.</li>
+                    <li>Use a ruler or measuring tape to determine distances.</li>
+                    <li>Use a stopwatch to measure time intervals.</li>
+                    <li>Check masses, angles, and force measurements as required.</li>
+                    <li>Record the units and relevant instrument precision.</li>
+                </ul>
+            </article>
+
+            <article class="resource-card">
+                <span class="resource-number">04</span>
+                <h2>Data Analysis and Results</h2>
+                <p>Use experimental data to study motion, forces, and energy.</p>
+                <ul>
+                    <li>Organize measurements in tables with clear headings and units.</li>
+                    <li>Calculate quantities such as velocity, acceleration, and force when applicable.</li>
+                    <li>Compare experimental results with theoretical predictions.</li>
+                    <li>Construct graphs with clearly labeled axes and units.</li>
+                    <li>Explain possible sources of error in your conclusions.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="resource-callout">
+            <h2>Need a Physics I experiment guide?</h2>
+            <p>
+                Explore the experiment library for activities involving
+                measurement and error analysis, vectors, simple machines,
+                kinematics, dynamics, and energy. Review each experiment's
+                purpose, materials, estimated duration, and suggested procedure.
+            </p>
+            <a class="button button-primary" href="experiments.html">
+                Browse Experiments
+            </a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            © <span id="current-year"></span> Physics Lab Guide.
+            Diane Steffy Chambi Gutierrez
+        </p>
+        <div class="footer-links">
+            <a href="attributions.html">Attributions</a>
+            <span aria-hidden="true">|</span>
+            <a href="E" target="_blank" rel="noopener noreferrer">Video Demo</a>
+        </div>
+        <p id="last-modified"></p>
+    </footer>
+</body>
+</html>
