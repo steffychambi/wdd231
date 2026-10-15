@@ -262,7 +262,7 @@ a {
 .button-primary {
     background: var(--teal);
     border-color: var(--teal);
-    color: #FFFFFF;
+    color: #304457;
 }
 
 .button-primary:hover {
