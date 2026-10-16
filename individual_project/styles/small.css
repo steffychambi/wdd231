@@ -262,7 +262,7 @@ a {
 .button-primary {
     background: var(--teal);
     border-color: var(--teal);
-    color: #304457;
+    color: #FFFFFF;
 }
 
 .button-primary:hover {
@@ -800,6 +800,10 @@ button:hover,
 
 :root[data-theme="dark"] .topic-card h3 {
     color: #FFFFFF;
+}
+
+:root[data-theme="dark"] .button-primary {
+    color: #304457;
 }
 
 :root[data-theme="dark"] .topic-card p {
